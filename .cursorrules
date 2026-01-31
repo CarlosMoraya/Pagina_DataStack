@@ -1,0 +1,23 @@
+# Regras do Projeto DataStack
+
+Ao trabalhar neste repositório, siga rigorosamente estas diretrizes para manter a integridade do projeto:
+
+## 1. Contexto e Negócio
+- Antes de iniciar qualquer tarefa, leia o arquivo `docs/context.md`.
+- Garanta que as novas funcionalidades e textos estejam alinhados com os pilares da DataStack (Dados, Automação, IA, SaaS).
+- Mantenha o tom de voz **Profissional, Pragmático e Estratégico**.
+
+## 2. Padrões de Design
+- Antes de realizar alterações visuais, consulte o arquivo `docs/design-system.md`.
+- Use exclusivamente a paleta de cores definida:
+    - **Brand:** `brand-50` para BG, `brand-900` para textos, `brand-950` para seções escuras.
+    - **Accent:** `accent-DEFAULT` (#3b82f6) para ações e `accent-dark` para hovers.
+- Mantenha a tipografia `Inter` e o uso de ícones `lucide-react`.
+
+## 3. Diretrizes Técnicas
+- **Tailwind CSS:** Use as classes utilitárias do Tailwind conforme as configurações extendidas em `index.html`.
+- **Componentização:** Reutilize os componentes existentes na pasta `components/` e mantenha os dados centralizados em `constants.ts` quando possível.
+- **Frontend:** O projeto utiliza React 19 + Vite. Siga as convenções modernas de hooks e TypeScript.
+
+## 4. Verificação de Segurança
+- Ao criar novas seções ou páginas, verifique se elas não quebram o layout responsivo ou a navegação definida no `App.tsx`.

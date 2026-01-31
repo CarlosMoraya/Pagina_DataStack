@@ -1,6 +1,9 @@
 import { Database, Workflow, Cpu, Code2 } from 'lucide-react';
 import { BlogPost, NavItem, Service, Testimonial } from './types';
 
+export const BLOG_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTe04ZnSK9l1b8DIos5eSLyB5MVs17zkaJAAvJv6wWpG0Hda6m8gtYn9n5LhQsdAthbYdCDqjDra3fS/pub?gid=0&single=true&output=csv';
+export const CONTACT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbylciRFBlmkCzvl5Dt-qxYk4Paoo4AEJMxnrp8vqSTKWsCORAz6knN3ce9AhISutmuA/exec'; // Cole o link do seu Google Apps Script aqui
+
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', path: '/' },
   { label: 'Quem Somos', path: '/sobre' },
@@ -16,6 +19,7 @@ export const SERVICES: Service[] = [
     title: 'Engenharia de Dados',
     description: 'Estruturação, limpeza e organização de dados para transformar informações brutas em ativos estratégicos.',
     icon: Database,
+    imageUrl: '/images/services/data-engineering.png',
     details: ['Data Warehousing', 'ETL/ELT Pipelines', 'Governança de Dados', 'Business Intelligence']
   },
   {
@@ -23,6 +27,7 @@ export const SERVICES: Service[] = [
     title: 'Automação de Processos',
     description: 'Otimização de fluxos de trabalho operacionais para reduzir custos e eliminar erros manuais.',
     icon: Workflow,
+    imageUrl: '/images/services/automation.png',
     details: ['RPA (Robotic Process Automation)', 'Integração de APIs', 'Workflows Customizados', 'Otimização Operacional']
   },
   {
@@ -30,6 +35,7 @@ export const SERVICES: Service[] = [
     title: 'Inteligência Artificial',
     description: 'Implementação de modelos preditivos e IA generativa aplicada ao contexto do seu negócio.',
     icon: Cpu,
+    imageUrl: '/images/services/ai.png',
     details: ['Machine Learning', 'Processamento de Linguagem Natural', 'Análise Preditiva', 'Chatbots Inteligentes']
   },
   {
@@ -37,6 +43,7 @@ export const SERVICES: Service[] = [
     title: 'Desenvolvimento de Sistemas',
     description: 'Criação de plataformas SaaS e websites robustos, escaláveis e focados na experiência do usuário.',
     icon: Code2,
+    imageUrl: '/images/services/saas.png',
     details: ['SaaS B2B', 'Arquitetura de Microserviços', 'Web Apps Modernos', 'Sistemas Internos']
   }
 ];

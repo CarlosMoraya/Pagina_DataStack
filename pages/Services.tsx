@@ -29,7 +29,7 @@ const Services: React.FC = () => {
                 <p className="text-lg text-brand-600 leading-relaxed mb-8">
                   {service.description} Focamos em entregar código limpo, arquitetura segura e documentação completa, garantindo que a tecnologia seja um ativo e não um débito técnico.
                 </p>
-                
+
                 <h4 className="font-semibold text-brand-900 mb-4 uppercase text-sm tracking-wide">O que entregamos:</h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                   {service.details.map((detail, idx) => (
@@ -41,10 +41,20 @@ const Services: React.FC = () => {
                 </ul>
               </div>
               <div className="w-full md:w-1/2">
-                {/* Abstract visualization placeholder */}
-                <div className="bg-gradient-to-br from-brand-100 to-white border border-brand-200 rounded-2xl p-8 h-96 flex items-center justify-center relative overflow-hidden shadow-lg">
-                   <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500 via-transparent to-transparent"></div>
-                   <service.icon size={120} className="text-brand-200" />
+                {/* Visual representation */}
+                <div className="bg-gradient-to-br from-brand-100 to-white border border-brand-200 rounded-2xl h-80 md:h-96 flex items-center justify-center relative overflow-hidden shadow-lg">
+                  {service.imageUrl ? (
+                    <img
+                      src={service.imageUrl}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500 via-transparent to-transparent"></div>
+                      <service.icon size={120} className="text-brand-200" />
+                    </>
+                  )}
                 </div>
               </div>
             </div>
@@ -59,7 +69,7 @@ const Services: React.FC = () => {
             <h2 className="text-3xl font-bold text-brand-900 mb-4">Áreas de Atuação</h2>
             <p className="text-brand-600">Expertise aplicada a diversos setores.</p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {['Varejo & E-commerce', 'Finanças & Fintech', 'Logística & Supply Chain', 'Saúde & Healthtech', 'Agronegócio', 'Indústria 4.0', 'Educação', 'Serviços Jurídicos'].map((area) => (
               <div key={area} className="bg-white p-6 rounded-lg text-center shadow-sm hover:shadow-md transition-shadow border border-transparent hover:border-brand-200">
@@ -70,14 +80,14 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-       {/* CTA */}
-       <section className="py-16 bg-white border-t border-brand-100">
+      {/* CTA */}
+      <section className="py-16 bg-white border-t border-brand-100">
         <div className="container mx-auto px-6 text-center">
-            <h2 className="text-2xl font-bold text-brand-900 mb-6">Não encontrou o que procura?</h2>
-            <p className="text-brand-600 mb-8">Desenvolvemos soluções sob medida para desafios complexos.</p>
-            <Link to="/contato" className="inline-flex items-center text-accent font-bold hover:underline">
-                Fale com nossos engenheiros <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+          <h2 className="text-2xl font-bold text-brand-900 mb-6">Não encontrou o que procura?</h2>
+          <p className="text-brand-600 mb-8">Desenvolvemos soluções sob medida para desafios complexos.</p>
+          <Link to="/contato" className="inline-flex items-center text-accent font-bold hover:underline">
+            Fale com nossos consultores <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </section>
     </div>

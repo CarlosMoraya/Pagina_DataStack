@@ -16,6 +16,7 @@ export interface Service {
   title: string;
   description: string;
   icon: React.ElementType;
+  imageUrl?: string;
   details: string[];
 }
 
