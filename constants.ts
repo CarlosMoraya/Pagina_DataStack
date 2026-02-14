@@ -5,7 +5,7 @@ export const CLIENTS: Client[] = [
   { name: 'Versan', logo: '/images/services/Versan.png' },
   { name: 'Pralog', logo: '/images/services/Pralog.png' },
   { name: 'Deluna', logo: '/images/services/Deluna.jpeg' },
-  { name: 'AgroTech Brasil', logo: '/images/services/agrotech.png' }
+  { name: 'Moraya', logo: '/images/services/Moraya.png' },
 ];
 
 export const BLOG_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTe04ZnSK9l1b8DIos5eSLyB5MVs17zkaJAAvJv6wWpG0Hda6m8gtYn9n5LhQsdAthbYdCDqjDra3fS/pub?gid=0&single=true&output=csv';
@@ -58,24 +58,24 @@ export const SERVICES: Service[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    name: 'Carlos Mendes',
-    role: 'CTO',
-    company: 'Logística Avançada S.A.',
-    content: 'A Data Stack não apenas entregou o código, mas entendeu nosso modelo de negócio. A automação implementada reduziu nosso tempo de processamento em 70%.'
+    name: 'Carlos Moraya',
+    role: 'Consultor Senior',
+    company: 'Moraya Consultoria.',
+    content: 'Contar com o Known How em tecnologia da DataStack nos coloca um passo a frente na busca por soluções mais efetivas para as dores de nossos clientes.'
   },
   {
     id: '2',
-    name: 'Fernanda Souza',
-    role: 'Diretora de Operações',
-    company: 'FinTech Solution',
-    content: 'Profissionalismo e pragmatismo. Eles transformaram nosso banco de dados caótico em uma fonte de verdade confiável para tomada de decisão.'
+    name: 'Pedro Quintella',
+    role: 'CEO',
+    company: 'Grupo Pralog',
+    content: 'A DataStack nos ajudou a transformar nossos processos operacionais, reduzindo custos e melhorando a eficiência do nosso negócio.'
   },
   {
     id: '3',
-    name: 'Roberto Alencar',
-    role: 'Fundador',
-    company: 'AgroTech Brasil',
-    content: 'A arquitetura do nosso novo SaaS é robusta e escalável, graças à visão técnica da equipe da Data Stack.'
+    name: 'Viviane',
+    role: 'Ger. Financeiro',
+    company: 'Versan Logistic',
+    content: 'Incrível! Tinhamos um processo de pagamento dos nossos motoristas que levava uma semana para finalizar. A DataStack reduziu esse tempo para um único click!'
   }
 ];
 
