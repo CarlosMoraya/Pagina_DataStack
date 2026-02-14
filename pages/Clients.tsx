@@ -19,28 +19,36 @@ const Clients: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <p className="text-center text-brand-500 mb-12 uppercase tracking-widest font-semibold text-sm">Empresas que transformamos</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {CLIENTS.map((client) => (
-              <div key={client.name} className="h-64 bg-brand-50 border border-brand-100 rounded-2xl flex items-center justify-center p-4 group transition-all duration-500 hover:bg-white hover:shadow-2xl hover:border-accent-DEFAULT/40 hover:-translate-y-2 overflow-hidden">
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  title={client.name}
-                  className="h-full w-full opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-contain transform group-hover:scale-105"
-                  onError={(e) => {
-                    // Fallback para caso a imagem ainda não exista
-                    (e.target as HTMLImageElement).style.display = 'none';
-                    const parent = (e.target as HTMLElement).parentElement;
-                    if (parent && !parent.querySelector('.fallback-text')) {
-                      const text = document.createElement('span');
-                      text.className = 'fallback-text text-xl font-black text-brand-400 uppercase tracking-tighter text-center px-4';
-                      text.innerText = client.name;
-                      parent.appendChild(text);
-                    }
-                  }}
-                />
-              </div>
-            ))}
+          <div className="relative overflow-hidden py-12">
+            {/* Gradientes de Máscara para suavizar as bordas */}
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+            <div className="flex animate-scroll-x hover:[animation-play-state:paused] whitespace-nowrap gap-10 w-max px-5">
+              {[...CLIENTS, ...CLIENTS, ...CLIENTS].map((client, index) => (
+                <div
+                  key={`${client.name}-${index}`}
+                  className="inline-flex h-48 w-80 bg-brand-50 border border-brand-100 rounded-2xl items-center justify-center p-6 group transition-all duration-500 hover:bg-white hover:shadow-2xl hover:border-accent-DEFAULT/40 overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    title={client.name}
+                    className="h-full w-full opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-contain transform group-hover:scale-105"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                      const parent = (e.target as HTMLElement).parentElement;
+                      if (parent && !parent.querySelector('.fallback-text')) {
+                        const text = document.createElement('span');
+                        text.className = 'fallback-text text-xl font-black text-brand-400 uppercase tracking-tighter text-center px-4';
+                        text.innerText = client.name;
+                        parent.appendChild(text);
+                      }
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
