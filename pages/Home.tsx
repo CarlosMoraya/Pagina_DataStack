@@ -23,7 +23,7 @@ const Home: React.FC = () => {
               Tecnologia certa para o <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">seu negócio crescer</span>
             </h1>
             <p className="text-xl text-brand-300 mb-10 max-w-2xl leading-relaxed">
-              Somos sua parceira técnica na construção de infraestrutura de dados, automação de processos e desenvolvimento de sistemas inteligentes. Sem "agenciês", apenas resultados.
+              Somos a solução para construção de infraestrutura de dados, automação de processos e desenvolvimento de sistemas inteligentes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contato" className="inline-flex justify-center items-center px-8 py-4 bg-accent hover:bg-accent-dark text-white rounded-lg font-semibold transition-all text-lg shadow-lg hover:shadow-blue-500/20">
