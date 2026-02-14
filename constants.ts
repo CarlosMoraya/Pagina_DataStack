@@ -1,5 +1,12 @@
 import { Database, Workflow, Cpu, Code2 } from 'lucide-react';
-import { BlogPost, NavItem, Service, Testimonial } from './types';
+import { BlogPost, NavItem, Service, Testimonial, Client } from './types';
+
+export const CLIENTS: Client[] = [
+  { name: 'Versan', logo: '/images/services/Versan.png' },
+  { name: 'Pralog', logo: '/images/services/Pralog.png' },
+  { name: 'Deluna', logo: '/images/services/Deluna.jpeg' },
+  { name: 'AgroTech Brasil', logo: '/images/services/agrotech.png' }
+];
 
 export const BLOG_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTe04ZnSK9l1b8DIos5eSLyB5MVs17zkaJAAvJv6wWpG0Hda6m8gtYn9n5LhQsdAthbYdCDqjDra3fS/pub?gid=0&single=true&output=csv';
 export const CONTACT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbylciRFBlmkCzvl5Dt-qxYk4Paoo4AEJMxnrp8vqSTKWsCORAz6knN3ce9AhISutmuA/exec'; // Cole o link do seu Google Apps Script aqui

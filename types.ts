@@ -28,6 +28,11 @@ export interface Testimonial {
   content: string;
 }
 
+export interface Client {
+  name: string;
+  logo: string;
+}
+
 export interface NavItem {
   label: string;
   path: string;
