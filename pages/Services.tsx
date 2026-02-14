@@ -41,20 +41,28 @@ const Services: React.FC = () => {
                 </ul>
               </div>
               <div className="w-full md:w-1/2">
-                {/* Visual representation */}
-                <div className="bg-gradient-to-br from-brand-100 to-white border border-brand-200 rounded-2xl h-80 md:h-96 flex items-center justify-center relative overflow-hidden shadow-lg">
+                <div className="relative group overflow-hidden rounded-2xl shadow-2xl border border-brand-100 bg-brand-50 aspect-video md:aspect-square lg:aspect-[4/3]">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-brand-900/20 to-transparent z-10"></div>
                   {service.imageUrl ? (
                     <img
                       src={service.imageUrl}
                       alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent) {
+                          const fallback = parent.querySelector('.fallback-icon') as HTMLElement;
+                          if (fallback) fallback.style.display = 'flex';
+                        }
+                      }}
                     />
-                  ) : (
-                    <>
-                      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500 via-transparent to-transparent"></div>
-                      <service.icon size={120} className="text-brand-200" />
-                    </>
-                  )}
+                  ) : null}
+                  <div className={`fallback-icon absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-100 to-white ${service.imageUrl ? 'hidden' : 'flex'}`}>
+                    <service.icon size={120} className="text-brand-200" />
+                    <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500 via-transparent to-transparent"></div>
+                  </div>
                 </div>
               </div>
             </div>

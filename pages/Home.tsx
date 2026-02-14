@@ -17,10 +17,10 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-6 relative z-10 pt-20">
           <div className="max-w-4xl">
             <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-800 border border-brand-700 text-accent text-sm font-semibold tracking-wide uppercase">
-              Tecnologia & Dados para PMEs
+              Tecnologia & Dados para Pequenas e médias empresas
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
-              Transformando Dados em <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Inteligência Estratégica</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.15] mb-8 pb-2">
+              Tecnologia certa para o <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">seu negócio crescer</span>
             </h1>
             <p className="text-xl text-brand-300 mb-10 max-w-2xl leading-relaxed">
               Somos sua parceira técnica na construção de infraestrutura de dados, automação de processos e desenvolvimento de sistemas inteligentes. Sem "agenciês", apenas resultados.
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
               <p className="text-brand-600 text-lg leading-relaxed mb-8">
                 A <strong>Data Stack</strong> atua como o braço tecnológico do seu negócio. Integramos sistemas, automatizamos o operacional e criamos a inteligência necessária para você escalar com segurança.
               </p>
-              
+
               <ul className="space-y-4">
                 {[
                   'Decisões baseadas em dados reais, não em achismos.',
@@ -69,29 +69,29 @@ const Home: React.FC = () => {
             </div>
             <div className="relative">
               <div className="bg-brand-100 rounded-2xl p-8 md:p-12">
-                 {/* Abstract visual representation of "Stack" */}
-                 <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                      <div className="h-10 w-10 bg-blue-100 rounded-lg mb-4 flex items-center justify-center text-blue-600 font-bold">01</div>
-                      <h4 className="font-bold text-brand-900">Coleta</h4>
-                      <p className="text-sm text-brand-500 mt-2">Centralização de fontes</p>
-                    </div>
-                    <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow mt-8">
-                      <div className="h-10 w-10 bg-blue-100 rounded-lg mb-4 flex items-center justify-center text-blue-600 font-bold">02</div>
-                      <h4 className="font-bold text-brand-900">Processamento</h4>
-                      <p className="text-sm text-brand-500 mt-2">Limpeza e estruturação</p>
-                    </div>
-                    <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow -mt-8">
-                       <div className="h-10 w-10 bg-blue-100 rounded-lg mb-4 flex items-center justify-center text-blue-600 font-bold">03</div>
-                      <h4 className="font-bold text-brand-900">Análise</h4>
-                      <p className="text-sm text-brand-500 mt-2">Inteligência aplicada</p>
-                    </div>
-                    <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                       <div className="h-10 w-10 bg-blue-100 rounded-lg mb-4 flex items-center justify-center text-blue-600 font-bold">04</div>
-                      <h4 className="font-bold text-brand-900">Ação</h4>
-                      <p className="text-sm text-brand-500 mt-2">Automação e escala</p>
-                    </div>
-                 </div>
+                {/* Abstract visual representation of "Stack" */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="h-10 w-10 bg-blue-100 rounded-lg mb-4 flex items-center justify-center text-blue-600 font-bold">01</div>
+                    <h4 className="font-bold text-brand-900">Coleta</h4>
+                    <p className="text-sm text-brand-500 mt-2">Centralização de fontes</p>
+                  </div>
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow mt-8">
+                    <div className="h-10 w-10 bg-blue-100 rounded-lg mb-4 flex items-center justify-center text-blue-600 font-bold">02</div>
+                    <h4 className="font-bold text-brand-900">Processamento</h4>
+                    <p className="text-sm text-brand-500 mt-2">Limpeza e estruturação</p>
+                  </div>
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow -mt-8">
+                    <div className="h-10 w-10 bg-blue-100 rounded-lg mb-4 flex items-center justify-center text-blue-600 font-bold">03</div>
+                    <h4 className="font-bold text-brand-900">Análise</h4>
+                    <p className="text-sm text-brand-500 mt-2">Inteligência aplicada</p>
+                  </div>
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="h-10 w-10 bg-blue-100 rounded-lg mb-4 flex items-center justify-center text-blue-600 font-bold">04</div>
+                    <h4 className="font-bold text-brand-900">Ação</h4>
+                    <p className="text-sm text-brand-500 mt-2">Automação e escala</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -127,13 +127,13 @@ const Home: React.FC = () => {
       {/* CTA Section */}
       <section className="py-24 bg-brand-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 p-12 opacity-5">
-           <svg width="200" height="200" viewBox="0 0 100 100" fill="white">
-             <rect x="0" y="0" width="20" height="20" />
-             <rect x="40" y="0" width="20" height="20" />
-             <rect x="80" y="0" width="20" height="20" />
-             <rect x="0" y="40" width="20" height="20" />
-             <rect x="40" y="40" width="20" height="20" />
-           </svg>
+          <svg width="200" height="200" viewBox="0 0 100 100" fill="white">
+            <rect x="0" y="0" width="20" height="20" />
+            <rect x="40" y="0" width="20" height="20" />
+            <rect x="80" y="0" width="20" height="20" />
+            <rect x="0" y="40" width="20" height="20" />
+            <rect x="40" y="40" width="20" height="20" />
+          </svg>
         </div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

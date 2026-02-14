@@ -26,7 +26,7 @@ export const SERVICES: Service[] = [
     title: 'Engenharia de Dados',
     description: 'Estruturação, limpeza e organização de dados para transformar informações brutas em ativos estratégicos.',
     icon: Database,
-    imageUrl: '/images/services/data-engineering.png',
+    imageUrl: '/images/services/Engenharia_Dados.png',
     details: ['Data Warehousing', 'ETL/ELT Pipelines', 'Governança de Dados', 'Business Intelligence']
   },
   {
@@ -34,7 +34,7 @@ export const SERVICES: Service[] = [
     title: 'Automação de Processos',
     description: 'Otimização de fluxos de trabalho operacionais para reduzir custos e eliminar erros manuais.',
     icon: Workflow,
-    imageUrl: '/images/services/automation.png',
+    imageUrl: '/images/services/RPA.jpg',
     details: ['RPA (Robotic Process Automation)', 'Integração de APIs', 'Workflows Customizados', 'Otimização Operacional']
   },
   {
@@ -42,7 +42,7 @@ export const SERVICES: Service[] = [
     title: 'Inteligência Artificial',
     description: 'Implementação de modelos preditivos e IA generativa aplicada ao contexto do seu negócio.',
     icon: Cpu,
-    imageUrl: '/images/services/ai.png',
+    imageUrl: '/images/services/IA.avif',
     details: ['Machine Learning', 'Processamento de Linguagem Natural', 'Análise Preditiva', 'Chatbots Inteligentes']
   },
   {
@@ -50,7 +50,7 @@ export const SERVICES: Service[] = [
     title: 'Desenvolvimento de Sistemas',
     description: 'Criação de plataformas SaaS e websites robustos, escaláveis e focados na experiência do usuário.',
     icon: Code2,
-    imageUrl: '/images/services/saas.png',
+    imageUrl: '/images/services/Saas.jpg',
     details: ['SaaS B2B', 'Arquitetura de Microserviços', 'Web Apps Modernos', 'Sistemas Internos']
   }
 ];

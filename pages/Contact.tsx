@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Phone, Send, Loader2, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Loader2, CheckCircle, Copy, Check } from 'lucide-react';
 import { CONTACT_SCRIPT_URL } from '../constants';
 
 const Contact: React.FC = () => {
@@ -11,6 +11,21 @@ const Contact: React.FC = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('comercial@data-stack.tech');
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText('+5521983884454');
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2000);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -77,9 +92,28 @@ const Contact: React.FC = () => {
                   <div className="bg-brand-100 p-3 rounded-lg text-brand-800 mr-4">
                     <Mail size={24} />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-brand-900">Email</h4>
-                    <a href="mailto:contato@datastack.tech" className="text-accent hover:underline">contato@datastack.tech</a>
+                  <div className="group/email">
+                    <h4 className="font-bold text-brand-900 mb-1">Email</h4>
+                    <div className="flex items-center gap-3">
+                      <a
+                        href="mailto:comercial@data-stack.tech?subject=Contato%20via%20Site%20-%20Data%20Stack"
+                        className="text-accent hover:underline font-medium"
+                      >
+                        comercial@data-stack.tech
+                      </a>
+                      <button
+                        onClick={handleCopyEmail}
+                        className="p-1.5 rounded-md hover:bg-brand-100 text-brand-400 hover:text-accent transition-all relative group/tooltip"
+                        title="Copiar e-mail"
+                      >
+                        {copiedEmail ? <Check size={16} className="text-green-500" /> : <Copy size={16} />}
+
+                        {/* Tooltip */}
+                        <span className={`absolute -top-8 left-1/2 -translate-x-1/2 bg-brand-900 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none whitespace-nowrap ${copiedEmail ? 'opacity-100' : ''}`}>
+                          {copiedEmail ? 'Copiado!' : 'Copiar e-mail'}
+                        </span>
+                      </button>
+                    </div>
                     <p className="text-sm text-brand-500 mt-1">Resposta em até 24h úteis.</p>
                   </div>
                 </div>
@@ -89,8 +123,29 @@ const Contact: React.FC = () => {
                     <Phone size={24} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-brand-900">Telefone / WhatsApp</h4>
-                    <p className="text-brand-600">+55 (11) 99999-9999</p>
+                    <h4 className="font-bold text-brand-900 mb-1">Telefone / WhatsApp</h4>
+                    <div className="flex items-center gap-3">
+                      <a
+                        href="https://wa.me/5521983884454"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-brand-600 hover:text-accent hover:underline font-medium transition-colors"
+                      >
+                        +55 (21) 98388-4454
+                      </a>
+                      <button
+                        onClick={handleCopyPhone}
+                        className="p-1.5 rounded-md hover:bg-brand-100 text-brand-400 hover:text-accent transition-all relative group/tooltip"
+                        title="Copiar telefone"
+                      >
+                        {copiedPhone ? <Check size={16} className="text-green-500" /> : <Copy size={16} />}
+
+                        {/* Tooltip */}
+                        <span className={`absolute -top-8 left-1/2 -translate-x-1/2 bg-brand-900 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none whitespace-nowrap ${copiedPhone ? 'opacity-100' : ''}`}>
+                          {copiedPhone ? 'Copiado!' : 'Copiar telefone'}
+                        </span>
+                      </button>
+                    </div>
                     <p className="text-sm text-brand-500 mt-1">Segunda a Sexta, 9h às 18h.</p>
                   </div>
                 </div>

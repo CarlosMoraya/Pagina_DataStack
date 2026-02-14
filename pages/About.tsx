@@ -19,16 +19,25 @@ const About: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-16 items-start">
             <div className="w-full md:w-1/2">
-              <h2 className="text-3xl font-bold text-brand-900 mb-6">Mais que consultores, parceiros de arquitetura.</h2>
+              <h2 className="text-3xl font-bold text-brand-900 mb-6">Não vendemos projetos. A gente resolve o problema!</h2>
               <div className="space-y-6 text-lg text-brand-600 leading-relaxed text-justify">
                 <p>
-                  A <strong>Data Stack</strong> nasceu da percepção de uma lacuna no mercado: pequenas e médias empresas que precisavam de tecnologia de ponta, mas eram atendidas por soluções genéricas ou consultorias focadas apenas em grandes corporações.
+                  A <strong>Data Stack</strong> existe porque vimos empresas como a sua gastando fortunas em sistemas que não conversam entre si, em planilhas infinitas e em horas perdidas com tarefas que um robô faria melhor.
                 </p>
                 <p>
-                  Não acreditamos em tecnologia por tecnologia. Para nós, cada linha de código, cada pipeline de dados e cada automação deve servir a um propósito claro: <strong>gerar eficiência, reduzir custos ou aumentar receita.</strong>
+                  <strong>A conta não fecha? A gente resolve isso.</strong>
                 </p>
                 <p>
-                  Nossa equipe é formada por engenheiros de dados, desenvolvedores full-stack e especialistas em IA que falam a língua do negócio. Traduzimos desafios operacionais em soluções técnicas elegantes e escaláveis.
+                  Cada solução que criamos tem um objetivo: colocar mais dinheiro no seu bolso. Seja automatizando processos que tomam horas da sua equipe, eliminando erros que custam caro ou organizando seus dados para você tomar decisões mais rápidas e certeiras.
+                </p>
+                <p>
+                  <strong>Tecnologia que fala a sua língua.</strong>
+                </p>
+                <p>
+                  Nada de termos complicados ou projetos intermináveis. Nossa equipe traduz o que você precisa em sistemas que funcionam de verdade — e mostram resultado no fim do mês.
+                </p>
+                <p className="font-semibold text-brand-900">
+                  Menos custo, mais resultado. É assim que trabalhamos.
                 </p>
               </div>
             </div>
@@ -57,7 +66,7 @@ const About: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-900 mb-4">Missão</h3>
               <p className="text-brand-600">
-                Democratizar o acesso à engenharia de dados e inteligência artificial para PMEs, transformando empresas tradicionais em organizações data-driven.
+                Entregar soluções tecnológicas que funcionem nas mãos de quem sempre achou que era só para os grandes.
               </p>
             </div>
 
@@ -68,7 +77,7 @@ const About: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-900 mb-4">Visão</h3>
               <p className="text-brand-600">
-                Ser a referência nacional em arquitetura de soluções digitais de alto desempenho, reconhecida pelo pragmatismo e excelência técnica.
+                Ser a escolha número um do pequeno e médio empresário que quer resultados reais, sem enrolação e sem estourar o orçamento.
               </p>
             </div>
 
@@ -78,11 +87,23 @@ const About: React.FC = () => {
                 <ShieldCheck size={24} />
               </div>
               <h3 className="text-xl font-bold text-brand-900 mb-4">Valores</h3>
-              <ul className="space-y-3 text-brand-600">
-                <li className="flex items-center gap-2"><Award size={16} className="text-accent" /> Excelência Técnica</li>
-                <li className="flex items-center gap-2"><Zap size={16} className="text-accent" /> Pragmatismo</li>
-                <li className="flex items-center gap-2"><ShieldCheck size={16} className="text-accent" /> Transparência</li>
-                <li className="flex items-center gap-2"><Users size={16} className="text-accent" /> Parceria de Longo Prazo</li>
+              <ul className="space-y-4 text-brand-600">
+                <li className="flex gap-3">
+                  <div className="mt-1"><Award size={18} className="text-accent shrink-0" /></div>
+                  <p><strong>Resultado no bolso:</strong> Tecnologia que não mostra economia na conta não serve para nada.</p>
+                </li>
+                <li className="flex gap-3">
+                  <div className="mt-1"><Zap size={18} className="text-accent shrink-0" /></div>
+                  <p><strong>Direto ao ponto:</strong> Nada de encher linguiça. Identificamos o problema, resolvemos rápido e você volta a focar no seu negócio.</p>
+                </li>
+                <li className="flex gap-3">
+                  <div className="mt-1"><ShieldCheck size={18} className="text-accent shrink-0" /></div>
+                  <p><strong>Transparência total:</strong> Você sabe exatamente o que está pagando, o que vai receber e quanto vai economizar.</p>
+                </li>
+                <li className="flex gap-3">
+                  <div className="mt-1"><Users size={18} className="text-accent shrink-0" /></div>
+                  <p><strong>Parceria de verdade:</strong> Não entregamos o projeto e sumimos. Estamos aqui quando você precisar — porque o seu sucesso é o nosso também.</p>
+                </li>
               </ul>
             </div>
           </div>
