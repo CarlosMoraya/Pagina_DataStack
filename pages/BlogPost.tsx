@@ -8,25 +8,48 @@ import { BlogPost as BlogPostType } from '../types';
 const MarkdownRenderer: React.FC<{ content: string }> = ({ content }) => {
   if (!content) return null;
 
-  // Split by headings or double newlines to ensure headers and paragraphs are distinct
-  const segments = content.split(/(\n\s*\n|(?=\n##))/g)
+  // Split by headings or double/single newlines to ensure headers and paragraphs are distinct
+  // This version is more aggressive in finding structure in plain text
+  const segments = content
+    .split(/(\n\s*##+\s*.*|\n\s*\n)/g)
     .map(s => s.trim())
-    .filter(s => s.length > 0 && s !== '\n');
+    .filter(s => s.length > 0);
 
   return (
     <div className="prose prose-lg lg:prose-xl prose-slate max-w-none prose-headings:text-brand-900 prose-headings:font-bold prose-p:text-brand-700 prose-p:leading-relaxed prose-strong:text-brand-900 prose-blockquote:border-accent prose-blockquote:bg-brand-50 prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic">
       {segments.map((segment, index) => {
+        const parseInline = (text: string) => text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/__(.*?)__/g, '<strong>$1</strong>');
+
+        // Detect Headers
         if (segment.startsWith('###')) {
-          return <h3 key={index} className="text-2xl mt-10 mb-4">{segment.replace(/^###\s*/, '')}</h3>;
+          return <h3 key={index} className="text-2xl font-bold mt-10 mb-4 text-brand-900"
+            dangerouslySetInnerHTML={{ __html: parseInline(segment.replace(/^###\s*/, '')) }} />;
         }
         if (segment.startsWith('##')) {
-          return <h2 key={index} className="text-3xl mt-14 mb-6 border-b border-brand-100 pb-4">{segment.replace(/^##\s*/, '')}</h2>;
+          return <h2 key={index} className="text-3xl font-bold mt-14 mb-6 border-b border-brand-100 pb-4 text-brand-900"
+            dangerouslySetInnerHTML={{ __html: parseInline(segment.replace(/^##\s*/, '')) }} />;
         }
         if (segment.startsWith('#')) {
-          return <h1 key={index} className="text-4xl mt-16 mb-8">{segment.replace(/^#\s*/, '')}</h1>;
+          return <h1 key={index} className="text-4xl font-bold mt-16 mb-8 text-brand-900"
+            dangerouslySetInnerHTML={{ __html: parseInline(segment.replace(/^#\s*/, '')) }} />;
         }
 
-        return <p key={index} className="mb-6">{segment}</p>;
+        // Detect lists
+        if (segment.includes('\n-') || segment.includes('\n*')) {
+          const lines = segment.split('\n');
+          return (
+            <ul key={index} className="list-disc list-inside mb-6 space-y-2">
+              {lines.map((line, lIdx) => (
+                <li key={lIdx} className="text-brand-700"
+                  dangerouslySetInnerHTML={{ __html: parseInline(line.replace(/^[-*]\s*/, '')) }} />
+              ))}
+            </ul>
+          );
+        }
+
+        // Standard paragraph
+        return <p key={index} className="mb-6 leading-relaxed whitespace-pre-wrap"
+          dangerouslySetInnerHTML={{ __html: parseInline(segment) }} />;
       })}
     </div>
   );
