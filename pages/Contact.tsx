@@ -156,8 +156,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-brand-900">Escritório</h4>
-                    <p className="text-brand-600">Av. Paulista, 1000 - Bela Vista</p>
-                    <p className="text-brand-600">São Paulo - SP, Brasil</p>
+                    <p className="text-brand-600">R. da Cevada, 93 - Sala 428 - Penha</p>
+                    <p className="text-brand-600">Rio de Janeiro - RJ - Brasil</p>
                   </div>
                 </div>
               </div>
