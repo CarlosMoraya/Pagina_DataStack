@@ -146,7 +146,7 @@ const Contact: React.FC = () => {
                         </span>
                       </button>
                     </div>
-                    <p className="text-sm text-brand-500 mt-1">Segunda a Sexta, 9h às 18h.</p>
+                    <p className="text-sm text-brand-500 mt-1">Segunda a Sábado, 9h às 18h.</p>
                   </div>
                 </div>
 
