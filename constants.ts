@@ -26,7 +26,7 @@ export const SERVICES: Service[] = [
     title: 'Engenharia de Dados',
     description: 'Estruturação, limpeza e organização de dados para transformar informações brutas em ativos estratégicos.',
     icon: Database,
-    imageUrl: '/images/services/Engenharia_Dados.png',
+    imageUrl: '/images/services/Engenharia_Dados_v2.png',
     details: ['Data Warehousing', 'ETL/ELT Pipelines', 'Governança de Dados', 'Business Intelligence']
   },
   {
