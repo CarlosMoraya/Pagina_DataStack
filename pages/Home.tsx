@@ -12,29 +12,27 @@ const Home: React.FC = () => {
         {/* Particle Network Animation Background */}
         <ParticleNetwork />
 
-        <div className="container mx-auto px-6 relative z-10 pt-20">
-          <div className="max-w-4xl">
-            <div className="mb-4 text-brand-300 text-sm font-semibold tracking-[0.2em] uppercase">
-              Transforme sua empresa com
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.15] mb-6 pb-2">
-              Soluções tecnológicas<br />
-              inovadoras <span className="animate-pulse">|</span>
+        <div className="container mx-auto px-6 relative z-10 h-full flex flex-col justify-center">
+          <div className="max-w-4xl text-left">
+            <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[1.1] mb-8 pb-2">
+              Tecnologia certa para<br />
+              o seu negócio crescer
             </h1>
-            <p className="text-brand-300 text-lg mb-10 max-w-2xl leading-relaxed">
-              Há 11 anos liderando a transformação digital empresarial, somos especialistas em
-              desenvolver soluções tecnológicas que impulsionam resultados.
+            <p className="text-brand-300 text-lg md:text-xl font-light max-w-4xl leading-relaxed mb-10">
+              Infraestrutura de dados, criação de sites e landing pages, automação de processos e sistemas inteligentes para PMEs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contato" className="inline-flex justify-center items-center px-8 py-3 bg-white text-brand-900 font-bold text-sm tracking-widest hover:bg-brand-100 transition-colors uppercase">
+              <Link to="/contato" className="inline-flex justify-center items-center px-8 py-4 bg-white text-brand-900 font-bold text-sm tracking-widest hover:bg-brand-100 transition-colors uppercase">
                 Agendar diagnóstico
               </Link>
-              <Link to="/servicos" className="inline-flex justify-center items-center px-8 py-3 bg-transparent border border-white text-white font-bold text-sm tracking-widest hover:bg-white/10 transition-colors uppercase">
+              <Link to="/servicos" className="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-white text-white font-bold text-sm tracking-widest hover:bg-white/10 transition-colors uppercase">
                 Soluções
               </Link>
             </div>
           </div>
         </div>
+
+
       </section>
 
       {/* Brief About / Value Prop */}

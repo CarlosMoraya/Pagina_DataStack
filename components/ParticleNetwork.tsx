@@ -40,7 +40,10 @@ const ParticleNetwork: React.FC = () => {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
                 ctx.fillStyle = this.color;
+                ctx.shadowBlur = this.size * 5; // create glow
+                ctx.shadowColor = this.color;
                 ctx.fill();
+                ctx.shadowBlur = 0; // reset for lines so they don't lag
             }
 
             update() {
@@ -60,14 +63,24 @@ const ParticleNetwork: React.FC = () => {
         const init = () => {
             if (!canvas) return;
             particlesArray = [];
-            const numberOfParticles = Math.floor((canvas.height * canvas.width) / 12000); // Tune denisty here
+            const numberOfParticles = Math.floor((canvas.height * canvas.width) / 10000); // slightly more dense
             for (let i = 0; i < numberOfParticles; i++) {
-                const size = Math.random() * 1.5 + 0.5;
+                const size = Math.random() * 2 + 0.5;
                 const x = Math.random() * (canvas.width - size * 2) + size;
                 const y = Math.random() * (canvas.height - size * 2) + size;
                 const directionX = (Math.random() * 1) - 0.5;
                 const directionY = (Math.random() * 1) - 0.5;
-                const color = '#ffffff';
+
+                // Colors ranging from white to cyan and blue
+                const colorRandom = Math.random();
+                let color = '#ffffff';
+                if (colorRandom > 0.8) {
+                    color = '#ffffff'; // White
+                } else if (colorRandom > 0.4) {
+                    color = '#38bdf8'; // Soft Cyan/Blue
+                } else {
+                    color = '#0284c7'; // Darker blue
+                }
 
                 particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
             }
@@ -86,7 +99,8 @@ const ParticleNetwork: React.FC = () => {
 
                     if (distanceSquared < connectionDistance) {
                         opacityValue = 1 - distanceSquared / connectionDistance;
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${opacityValue * 0.4})`; // 0.4 is max lines opacity
+                        ctx.strokeStyle = `rgba(56, 189, 248, ${opacityValue * 0.4})`; // blueish lines
+
                         ctx.lineWidth = 1;
                         ctx.beginPath();
                         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -121,7 +135,7 @@ const ParticleNetwork: React.FC = () => {
     return (
         <canvas
             ref={canvasRef}
-            className="absolute inset-0 z-0 opacity-40"
+            className="absolute inset-0 z-0 opacity-100"
             style={{ display: 'block', backgroundColor: 'transparent', pointerEvents: 'none' }}
         />
     );
