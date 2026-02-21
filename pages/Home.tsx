@@ -2,36 +2,35 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { SERVICES } from '../constants';
+import ParticleNetwork from '../components/ParticleNetwork';
 
 const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-brand-900 overflow-hidden">
-        {/* Abstract Background Shapes */}
-        <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-800 to-transparent transform skew-x-12"></div>
-          <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-accent-dark to-transparent rounded-full blur-3xl"></div>
-        </div>
+      <section className="relative min-h-[90vh] flex items-center bg-brand-950 overflow-hidden">
+        {/* Particle Network Animation Background */}
+        <ParticleNetwork />
 
         <div className="container mx-auto px-6 relative z-10 pt-20">
           <div className="max-w-4xl">
-            <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-800 border border-brand-700 text-accent text-sm font-semibold tracking-wide uppercase">
-              Tecnologia & Dados para Pequenas e médias empresas
+            <div className="mb-4 text-brand-300 text-sm font-semibold tracking-[0.2em] uppercase">
+              Transforme sua empresa com
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.15] mb-8 pb-2">
-              Tecnologia certa para o <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">seu negócio crescer</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.15] mb-6 pb-2">
+              Soluções tecnológicas<br />
+              inovadoras <span className="animate-pulse">|</span>
             </h1>
-            <p className="text-xl text-brand-300 mb-10 max-w-2xl leading-relaxed">
-              Somos a solução para construção de infraestrutura de dados, automação de processos e desenvolvimento de sistemas inteligentes.
+            <p className="text-brand-300 text-lg mb-10 max-w-2xl leading-relaxed">
+              Há 11 anos liderando a transformação digital empresarial, somos especialistas em
+              desenvolver soluções tecnológicas que impulsionam resultados.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contato" className="inline-flex justify-center items-center px-8 py-4 bg-accent hover:bg-accent-dark text-white rounded-lg font-semibold transition-all text-lg shadow-lg hover:shadow-blue-500/20">
-                Agendar Diagnóstico
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Link to="/contato" className="inline-flex justify-center items-center px-8 py-3 bg-white text-brand-900 font-bold text-sm tracking-widest hover:bg-brand-100 transition-colors uppercase">
+                Agendar diagnóstico
               </Link>
-              <Link to="/servicos" className="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-brand-600 text-white hover:bg-brand-800 rounded-lg font-semibold transition-all text-lg">
-                Conhecer Soluções
+              <Link to="/servicos" className="inline-flex justify-center items-center px-8 py-3 bg-transparent border border-white text-white font-bold text-sm tracking-widest hover:bg-white/10 transition-colors uppercase">
+                Soluções
               </Link>
             </div>
           </div>
