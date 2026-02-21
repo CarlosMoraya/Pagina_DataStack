@@ -41,7 +41,7 @@ const Home: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-6">
-                Não somos uma agência genérica. Somos arquitetos de soluções.
+                Não entregamos soluções de prateleira, entendemos a sua necessidade e criamos a solução certa.
               </h2>
               <p className="text-brand-600 text-lg leading-relaxed mb-6">
                 No mundo atual, intuição não é suficiente. Sua empresa gera dados o tempo todo, mas eles estão trabalhando a seu favor?
@@ -54,8 +54,8 @@ const Home: React.FC = () => {
                 {[
                   'Decisões baseadas em dados reais, não em achismos.',
                   'Redução drástica de trabalho manual repetitivo.',
-                  'Sistemas proprietários que agregam valor ao seu IP.',
-                  'Segurança e escalabilidade desde o dia um.'
+                  'Soluções customizadas para atender a sua necessidade.',
+                  'Segurança e escalabilidade desde o início.'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start text-brand-700 font-medium">
                     <CheckCircle2 className="h-6 w-6 text-accent mr-3 shrink-0" />
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
             <p className="text-brand-600 text-lg">Soluções técnicas robustas para resolver problemas reais de negócio.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((service) => (
               <div key={service.id} className="bg-white p-8 rounded-xl shadow-sm border border-brand-100 hover:border-accent hover:shadow-md transition-all group">
                 <div className="h-12 w-12 bg-brand-50 rounded-lg flex items-center justify-center text-brand-900 mb-6 group-hover:bg-accent group-hover:text-white transition-colors">

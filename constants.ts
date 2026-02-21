@@ -1,4 +1,4 @@
-import { Database, Workflow, Cpu, Code2 } from 'lucide-react';
+import { Database, Workflow, Cpu, Code2, Layout, Users } from 'lucide-react';
 import { BlogPost, NavItem, Service, Testimonial, Client } from './types';
 
 export const CLIENTS: Client[] = [
@@ -52,6 +52,22 @@ export const SERVICES: Service[] = [
     icon: Code2,
     imageUrl: '/images/services/Saas.jpg',
     details: ['SaaS B2B', 'Arquitetura de Microserviços', 'Web Apps Modernos', 'Sistemas Internos']
+  },
+  {
+    id: 'sites',
+    title: 'Sites e Landing Pages',
+    description: 'Desenvolvimento de presenças digitais de alto impacto, rápidas e otimizadas para conversão.',
+    icon: Layout,
+    imageUrl: '/images/services/LandingPages.jpg',
+    details: ['Landing Pages de Alta Conversão', 'Sites Institucionais', 'SEO Otimizado', 'Performance Web']
+  },
+  {
+    id: 'outsourcing',
+    title: 'Terceirização de TI',
+    description: 'Suporte técnico estratégico e gestão de infraestrutura para que você foque apenas no seu negócio.',
+    icon: Users,
+    imageUrl: '/images/services/Outsourcing.jpg',
+    details: ['Gestão de Infraestrutura', 'Suporte Técnico N1/N2/N3', 'Consultoria em Segurança', 'Cloud Management']
   }
 ];
 
