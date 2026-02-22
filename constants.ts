@@ -2,10 +2,10 @@ import { Database, Workflow, Cpu, Code2, Layout, Users } from 'lucide-react';
 import { BlogPost, NavItem, Service, Testimonial, Client } from './types';
 
 export const CLIENTS: Client[] = [
-  { name: 'Versan', logo: '/images/services/Versan.png' },
-  { name: 'Pralog', logo: '/images/services/Pralog.png' },
-  { name: 'Deluna', logo: '/images/services/Deluna.png' },
-  { name: '4Log', logo: '/images/services/4Log.png' },
+  { name: 'Versan', logo: '/images/services/Versan.png?v=1' },
+  { name: 'Pralog', logo: '/images/services/Pralog.png?v=1' },
+  { name: 'Deluna', logo: '/images/services/Deluna.png?v=1' },
+  { name: '4Log', logo: '/images/services/4Log.png?v=1' },
 ];
 
 export const PARTNERS: Client[] = [
