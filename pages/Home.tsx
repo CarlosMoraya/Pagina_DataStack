@@ -22,10 +22,10 @@ const Home: React.FC = () => {
               Infraestrutura de dados, criação de sites e landing pages, automação de processos e sistemas inteligentes para PMEs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contato" className="inline-flex justify-center items-center px-8 py-4 bg-white text-brand-900 font-bold text-sm tracking-widest hover:bg-brand-100 transition-colors uppercase">
+              <Link to="/contato" className="inline-flex justify-center items-center px-6 py-3 md:px-8 md:py-4 bg-white text-brand-900 font-bold text-sm tracking-widest hover:bg-brand-100 transition-colors uppercase w-full sm:w-auto">
                 Agendar diagnóstico
               </Link>
-              <Link to="/servicos" className="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-white text-white font-bold text-sm tracking-widest hover:bg-white/10 transition-colors uppercase">
+              <Link to="/servicos" className="inline-flex justify-center items-center px-6 py-3 md:px-8 md:py-4 bg-transparent border border-white text-white font-bold text-sm tracking-widest hover:bg-white/10 transition-colors uppercase w-full sm:w-auto">
                 Soluções
               </Link>
             </div>
@@ -38,14 +38,17 @@ const Home: React.FC = () => {
       {/* Brief About / Value Prop */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-6">
-                Não entregamos soluções de prateleira, entendemos a sua necessidade e criamos a solução certa.
-              </h2>
-              <p className="text-brand-600 text-lg leading-relaxed mb-6">
-                No mundo atual, intuição não é suficiente. Sua empresa gera dados o tempo todo, mas eles estão trabalhando a seu favor?
-              </p>
+          <div className="max-w-4xl mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-6">
+              Não entregamos soluções de prateleira, entendemos a sua necessidade e criamos a solução certa.
+            </h2>
+            <p className="text-brand-600 text-lg leading-relaxed">
+              No mundo atual, intuição não é suficiente. Sua empresa gera dados o tempo todo, mas eles estão trabalhando a seu favor?
+            </p>
+          </div>
+
+          <div className="flex flex-col-reverse lg:flex-row gap-16 items-start">
+            <div className="w-full lg:w-1/2">
               <p className="text-brand-600 text-lg leading-relaxed mb-8">
                 A <strong>Data Stack</strong> atua como o braço tecnológico do seu negócio. Integramos sistemas, automatizamos o operacional e criamos a inteligência necessária para você escalar com segurança.
               </p>
@@ -64,8 +67,8 @@ const Home: React.FC = () => {
                 ))}
               </ul>
             </div>
-            <div className="relative">
-              <div className="bg-brand-100 rounded-2xl p-8 md:p-12">
+            <div className="w-full lg:w-1/2">
+              <div className="bg-brand-100 rounded-2xl p-8 md:p-12 mb-12 lg:mb-0">
                 {/* Abstract visual representation of "Stack" */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">

@@ -17,9 +17,12 @@ const About: React.FC = () => {
       {/* Main Content */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-16 items-start">
-            <div className="w-full md:w-1/2">
-              <h2 className="text-3xl font-bold text-brand-900 mb-6">Não vendemos projetos. A gente resolve o problema!</h2>
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-6">Não vendemos projetos. A gente resolve o problema!</h2>
+          </div>
+
+          <div className="flex flex-col-reverse lg:flex-row gap-16 items-start">
+            <div className="w-full lg:w-1/2">
               <div className="space-y-6 text-lg text-brand-600 leading-relaxed text-justify">
                 <p>
                   A <strong>Data Stack</strong> existe porque vimos empresas como a sua gastando fortunas em sistemas que não conversam entre si, em planilhas infinitas e em horas perdidas com tarefas que um robô faria melhor.
@@ -41,13 +44,13 @@ const About: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full md:w-1/2 grid grid-cols-2 gap-4">
+            <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 pb-12 lg:pb-0">
               <div className="bg-brand-50 p-6 rounded-xl h-64 flex flex-col justify-end">
-                <span className="text-6xl font-bold text-accent mb-2">+50</span>
+                <span className="text-5xl md:text-6xl font-bold text-accent mb-2">+50</span>
                 <span className="text-brand-600 font-medium text-lg">Projetos Entregues</span>
               </div>
               <div className="bg-brand-900 p-6 rounded-xl h-64 flex flex-col justify-end text-white translate-y-8">
-                <span className="text-6xl font-bold mb-2">30%</span>
+                <span className="text-5xl md:text-6xl font-bold mb-2">30%</span>
                 <span className="text-brand-300 font-medium text-lg">Média de Redução de Custos Operacionais</span>
               </div>
             </div>
@@ -58,7 +61,7 @@ const About: React.FC = () => {
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-brand-50">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Mission */}
             <div className="bg-white p-8 rounded-xl shadow-sm border-t-4 border-accent">
               <div className="bg-blue-50 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-accent">
@@ -82,12 +85,12 @@ const About: React.FC = () => {
             </div>
 
             {/* Values */}
-            <div className="bg-white p-8 rounded-xl shadow-sm border-t-4 border-brand-400">
+            <div className="bg-white p-8 rounded-xl shadow-sm border-t-4 border-brand-400 md:col-span-2 lg:col-span-1">
               <div className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-brand-600">
                 <ShieldCheck size={24} />
               </div>
               <h3 className="text-xl font-bold text-brand-900 mb-4">Valores</h3>
-              <ul className="space-y-4 text-brand-600">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 text-brand-600">
                 <li className="flex gap-3">
                   <div className="mt-1"><Award size={18} className="text-accent shrink-0" /></div>
                   <p><strong>Resultado no bolso:</strong> Tecnologia que não mostra economia na conta não serve para nada.</p>

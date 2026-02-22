@@ -26,9 +26,8 @@ const Layout: React.FC = () => {
     <div className="flex flex-col min-h-screen font-sans">
       {/* Header */}
       <header
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
-        }`}
+        className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+          }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
           <NavLink to="/">
@@ -36,16 +35,15 @@ const Layout: React.FC = () => {
           </NavLink>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex gap-8 items-center">
+          <nav className="hidden md:flex gap-4 lg:gap-8 items-center ml-auto mr-8">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-colors hover:text-accent tracking-wide ${
-                    isActive
-                      ? 'text-accent'
-                      : isScrolled || pathname !== '/'
+                  `text-sm font-medium transition-colors hover:text-accent tracking-wide ${isActive
+                    ? 'text-accent'
+                    : isScrolled || pathname !== '/'
                       ? 'text-brand-700'
                       : 'text-white/90 hover:text-white'
                   }`
@@ -56,11 +54,10 @@ const Layout: React.FC = () => {
             ))}
             <NavLink
               to="/contato"
-              className={`px-5 py-2.5 rounded-md text-sm font-semibold transition-all ${
-                isScrolled || pathname !== '/'
+              className={`hidden lg:inline-block px-5 py-2.5 rounded-md text-sm font-semibold transition-all ${isScrolled || pathname !== '/'
                   ? 'bg-brand-900 text-white hover:bg-brand-800'
                   : 'bg-white text-brand-900 hover:bg-brand-50'
-              }`}
+                }`}
             >
               Falar com Especialista
             </NavLink>
@@ -68,9 +65,8 @@ const Layout: React.FC = () => {
 
           {/* Mobile Toggle */}
           <button
-            className={`md:hidden p-2 ${
-              isScrolled || pathname !== '/' ? 'text-brand-900' : 'text-white'
-            }`}
+            className={`md:hidden p-2 ${isScrolled || pathname !== '/' ? 'text-brand-900' : 'text-white'
+              }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X /> : <Menu />}
@@ -109,7 +105,7 @@ const Layout: React.FC = () => {
             <div className="col-span-1 md:col-span-2">
               <Logo variant="light" className="h-10 mb-6" />
               <p className="text-brand-400 max-w-sm mb-6 leading-relaxed">
-                Transformamos dados complexos em inteligência estratégica. 
+                Transformamos dados complexos em inteligência estratégica.
                 Parceira tecnológica para empresas que buscam eficiência, automação e crescimento escalável.
               </p>
               <div className="flex gap-4 text-brand-400">
