@@ -141,7 +141,7 @@ const Home: React.FC = () => {
                     src={partner.logo}
                     alt={partner.name}
                     title={partner.name}
-                    className="h-full w-full opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-contain transform group-hover:scale-105"
+                    className="h-full w-full opacity-90 group-hover:opacity-100 transition-all duration-700 object-contain transform group-hover:scale-105"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = 'none';
                       const parent = (e.target as HTMLElement).parentElement;

@@ -9,13 +9,13 @@ export const CLIENTS: Client[] = [
 ];
 
 export const PARTNERS: Client[] = [
-  { name: 'Parceiro Exemplo 1', logo: '/images/partners/Supabase2.png' },
-  { name: 'Parceiro Exemplo 2', logo: '/images/partners/GoogleAIStudio3.png' },
-  { name: 'Parceiro Exemplo 3', logo: '/images/partners/Antigravity2.png' },
-  { name: 'Parceiro Exemplo 4', logo: '/images/partners/Claude2.png' },
-  { name: 'Parceiro Exemplo 5', logo: '/images/partners/bigquery.png' },
-  { name: 'Parceiro Exemplo 6', logo: '/images/partners/N8N.png' },
-  { name: 'Parceiro Exemplo 7', logo: '/images/partners/Python.png' },
+  { name: 'Supabase', logo: '/images/partners/Supabase2.png' },
+  { name: 'Google AI Studio', logo: '/images/partners/GoogleAIStudio3.png' },
+  { name: 'Antigravity', logo: '/images/partners/Antigravity2.png' },
+  { name: 'Claude AI', logo: '/images/partners/Claude2.png' },
+  { name: 'BigQuery', logo: '/images/partners/bigquery.png' },
+  { name: 'n8n', logo: '/images/partners/N8N.png' },
+  { name: 'Python', logo: '/images/partners/Python.png' },
 ];
 
 export const BLOG_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTe04ZnSK9l1b8DIos5eSLyB5MVs17zkaJAAvJv6wWpG0Hda6m8gtYn9n5LhQsdAthbYdCDqjDra3fS/pub?gid=0&single=true&output=csv';
