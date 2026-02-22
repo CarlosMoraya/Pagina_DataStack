@@ -66,7 +66,7 @@ const About: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-900 mb-4">Missão</h3>
               <p className="text-brand-600">
-                Entregar soluções tecnológicas que funcionem nas mãos de quem sempre achou que era só para os grandes.
+                Democratizar soluções tecnológicas sob medida que gerem valor às PMEs.
               </p>
             </div>
 

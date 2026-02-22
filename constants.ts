@@ -4,8 +4,8 @@ import { BlogPost, NavItem, Service, Testimonial, Client } from './types';
 export const CLIENTS: Client[] = [
   { name: 'Versan', logo: '/images/services/Versan.png' },
   { name: 'Pralog', logo: '/images/services/Pralog.png' },
-  { name: 'Deluna', logo: '/images/services/Deluna.jpeg' },
-  { name: 'Moraya', logo: '/images/services/Moraya.png' },
+  { name: 'Deluna', logo: '/images/services/Deluna.png' },
+  { name: '4Log', logo: '/images/services/4Log.png' },
 ];
 
 export const PARTNERS: Client[] = [

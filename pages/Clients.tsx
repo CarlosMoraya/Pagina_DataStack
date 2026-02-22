@@ -28,7 +28,7 @@ const Clients: React.FC = () => {
               {[...CLIENTS, ...CLIENTS, ...CLIENTS].map((client, index) => (
                 <div
                   key={`${client.name}-${index}`}
-                  className="inline-flex h-48 w-80 bg-brand-50 border border-brand-100 rounded-2xl items-center justify-center p-6 group transition-all duration-500 hover:bg-white hover:shadow-2xl hover:border-accent-DEFAULT/40 overflow-hidden flex-shrink-0"
+                  className="inline-flex h-48 w-80 bg-brand-50 border border-brand-100 rounded-2xl items-center justify-center p-0 group transition-all duration-500 hover:bg-white hover:shadow-2xl hover:border-accent-DEFAULT/40 overflow-hidden flex-shrink-0"
                 >
                   <img
                     src={client.logo}
