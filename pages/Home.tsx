@@ -14,12 +14,12 @@ const Home: React.FC = () => {
 
         <div className="container mx-auto px-6 relative z-10 h-full flex flex-col justify-center">
           <div className="max-w-4xl text-left">
-            <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[1.1] mb-8 pb-2">
-              Tecnologia certa para<br />
-              o seu negócio crescer
+            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.05] mb-10 tracking-tight">
+              Aplicamos tecnologia para<br className="hidden md:block" />
+              o seu negócio <span className="text-accent">crescer</span>
             </h1>
             <p className="text-brand-300 text-lg md:text-xl font-light max-w-4xl leading-relaxed mb-10">
-              Infraestrutura de dados, criação de sites e landing pages, automação de processos e sistemas inteligentes para PMEs.
+              Consultoria especializada, infra-estrutura de dados, automação de processos, integração de sistemas, visualização de dados e criação de páginas web para PMEs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contato" className="inline-flex justify-center items-center px-6 py-3 md:px-8 md:py-4 bg-white text-brand-900 font-bold text-sm tracking-widest hover:bg-brand-100 transition-colors uppercase w-full sm:w-auto">

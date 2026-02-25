@@ -83,13 +83,6 @@ export const SERVICES: Service[] = [
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    id: '1',
-    name: 'Carlos Moraya',
-    role: 'Consultor Senior',
-    company: 'Moraya Consultoria.',
-    content: 'Contar com o Known How em tecnologia da DataStack nos coloca um passo a frente na busca por soluções mais efetivas para as dores de nossos clientes.'
-  },
-  {
     id: '2',
     name: 'Pedro Quintella',
     role: 'CEO',

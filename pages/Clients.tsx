@@ -57,7 +57,7 @@ const Clients: React.FC = () => {
       <section className="py-24 bg-brand-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-brand-900 text-center mb-16">O que dizem sobre nós</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {TESTIMONIALS.map((testimonial) => (
               <div key={testimonial.id} className="bg-white p-8 rounded-xl shadow-sm border border-brand-100 flex flex-col relative">
                 <Quote className="absolute top-6 right-6 text-brand-100 h-10 w-10 fill-current" />
