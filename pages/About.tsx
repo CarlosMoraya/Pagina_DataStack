@@ -46,7 +46,7 @@ const About: React.FC = () => {
             </div>
             <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 pb-12 lg:pb-0">
               <div className="bg-brand-50 p-6 rounded-xl h-64 flex flex-col justify-end">
-                <span className="text-5xl md:text-6xl font-bold text-accent mb-2">+50</span>
+                <span className="text-5xl md:text-6xl font-bold text-accent mb-2">+20</span>
                 <span className="text-brand-600 font-medium text-lg">Projetos Entregues</span>
               </div>
               <div className="bg-brand-900 p-6 rounded-xl h-64 flex flex-col justify-end text-white translate-y-8">
