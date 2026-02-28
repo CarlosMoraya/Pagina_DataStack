@@ -15,7 +15,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-6 relative z-10 h-full flex flex-col justify-center pt-32 pb-20">
           <div className="max-w-4xl text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] mb-10 tracking-tight">
-              Aplicamos tecnologia para<br className="hidden md:block" />
+              Aplicamos tecnologia para <br className="hidden md:block" />
               o seu negócio <span className="text-accent">crescer</span>
             </h1>
             <p className="text-brand-300 text-lg md:text-xl font-light max-w-4xl leading-relaxed mb-10">
