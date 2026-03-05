@@ -2,15 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { SERVICES, PARTNERS } from '../constants';
-import ParticleNetwork from '../components/ParticleNetwork';
+import BackgroundVideo from '../components/BackgroundVideo';
 
 const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center bg-brand-950 overflow-hidden">
-        {/* Particle Network Animation Background */}
-        <ParticleNetwork />
+        {/* Background Video */}
+        <BackgroundVideo />
 
         <div className="container mx-auto px-6 relative z-10 h-full flex flex-col justify-center pt-32 pb-20">
           <div className="max-w-4xl text-left">
