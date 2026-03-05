@@ -7,6 +7,7 @@ const BackgroundVideo: React.FC = () => {
             <div className="absolute inset-0 bg-brand-950/50 z-10" />
 
             <video
+                key="hero-video-final"
                 autoPlay
                 loop
                 muted
@@ -14,7 +15,7 @@ const BackgroundVideo: React.FC = () => {
                 preload="auto"
                 className="w-full h-full object-cover"
             >
-                <source src="/videos/hero-video.mp4?v=1.1" type="video/mp4" />
+                <source src="/videos/hero-video-final.mp4" type="video/mp4" />
                 Seu navegador não suporta vídeos.
             </video>
         </div>
