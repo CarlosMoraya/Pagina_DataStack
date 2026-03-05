@@ -5,8 +5,8 @@ const BackgroundVideo: React.FC = () => {
 
     return (
         <div className="absolute inset-0 z-0 w-full h-full overflow-hidden bg-brand-950">
-            {/* Cinematic Overlay - Ajuste a opacidade conforme necessário para legibilidade */}
-            <div className="absolute inset-0 bg-brand-950/50 z-10" />
+            {/* Cinematic Overlay - Ajustei para 70% de opacidade para realçar o texto branco na frente */}
+            <div className="absolute inset-0 bg-brand-950/70 z-10" />
 
             <video
                 key="hero-video-final-v2"

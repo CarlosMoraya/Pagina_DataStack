@@ -18,7 +18,7 @@ const Home: React.FC = () => {
               Aplicamos tecnologia para <br className="hidden md:block" />
               o seu negócio <span className="text-accent">crescer</span>
             </h1>
-            <p className="text-brand-300 text-lg md:text-xl font-light max-w-4xl leading-relaxed mb-10">
+            <p className="text-white text-lg md:text-xl font-normal max-w-4xl leading-relaxed mb-10 drop-shadow-sm opacity-90">
               Consultoria especializada, infra-estrutura de dados, automação de processos, integração de sistemas, visualização de dados e criação de páginas web para PMEs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
