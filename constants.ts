@@ -1,10 +1,10 @@
-import { Database, Workflow, Cpu, Code2, Layout, Users } from 'lucide-react';
-import { BlogPost, NavItem, Service, Testimonial, Client } from './types';
+import { CreditCard, Share2, FileText, BarChart3, Smartphone, Truck, Target } from 'lucide-react';
+import { BlogPost, NavItem, Service, Testimonial, Client, FounderInfo, BetafleetInfo } from './types';
 
 export const CLIENTS: Client[] = [
-  { name: 'Versan', logo: '/images/services/Versan.png?v=1' },
-  { name: 'Pralog', logo: '/images/services/Pralog.png?v=1' },
-  { name: 'Deluna', logo: '/images/services/Deluna.png?v=1' },
+  { name: 'Versan Logistic', logo: '/images/services/Versan.png?v=1' },
+  { name: 'Grupo Pralog', logo: '/images/services/Pralog.png?v=1' },
+  { name: 'Deluna Transportes', logo: '/images/services/Deluna.png?v=1' },
   { name: '4Log', logo: '/images/services/4Log.png?v=1' },
 ];
 
@@ -19,12 +19,53 @@ export const PARTNERS: Client[] = [
 ];
 
 export const BLOG_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTe04ZnSK9l1b8DIos5eSLyB5MVs17zkaJAAvJv6wWpG0Hda6m8gtYn9n5LhQsdAthbYdCDqjDra3fS/pub?gid=0&single=true&output=csv';
-export const CONTACT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbylciRFBlmkCzvl5Dt-qxYk4Paoo4AEJMxnrp8vqSTKWsCORAz6knN3ce9AhISutmuA/exec'; // Cole o link do seu Google Apps Script aqui
+export const CONTACT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbylciRFBlmkCzvl5Dt-qxYk4Paoo4AEJMxnrp8vqSTKWsCORAz6knN3ce9AhISutmuA/exec';
+
+export const CARLOS_LINKEDIN = 'https://www.linkedin.com/in/carlosmoraya/';
+
+export const CARLOS_INFO: FounderInfo = {
+  name: 'Carlos Moraya',
+  role: 'Fundador & Consultor',
+  tagline: '15+ anos resolvendo problemas de logística com tecnologia',
+  experience: 'Mais de 15 anos de experiência em logística e transporte, com passagens por Coca-Cola Andina, Mercado Livre, Grupo Pralog e Deluna Transportes. Especialista em tecnologia aplicada a negócios, com MBA em Logística e pós-graduação em Tecnologia Aplicada (AI, Data Science e Big Data) pela PUCRS.',
+  education: [
+    'MBA em Logística',
+    'Consultoria Empresarial',
+    'Tecnologia Aplicada aos Negócios — PUCRS',
+  ],
+  companies: [
+    { name: 'Deluna Transportes', role: 'Gerente de Operações Last/First Mile', period: '2024 — Atual' },
+    { name: 'Grupo Pralog', role: 'Gerente de Logística', period: '2022 — 2024' },
+    { name: 'Mercado Livre', role: 'Team Leader (Frota e Roteirização)', period: '2020 — 2022' },
+    { name: 'Coca-Cola Andina', role: 'Supervisor de Distribuição', period: '2015 — 2018' },
+  ],
+  skills: [
+    'Python', 'SQL', 'BigQuery', 'Looker Studio',
+    'Power BI', 'WMS', 'Gestão de Frota',
+    'Lean Manufacturing', 'Six Sigma', 'Melhoria Contínua'
+  ],
+  linkedin: CARLOS_LINKEDIN,
+};
+
+export const BETAFLEET: BetafleetInfo = {
+  name: 'BetaFleet',
+  tagline: 'Gestão Inteligente de Frota para E-commerce',
+  description: 'Plataforma criada por Carlos Moraya que centraliza dados operacionais, reduz custos e aumenta o ROI de cada veículo da operação. Uma prova do conhecimento na prática.',
+  url: 'https://betafleet.com.br',
+  features: [
+    'Dashboard operacional em tempo real',
+    'Controle de manutenção preventiva',
+    'Gestão financeira por veículo',
+    'Checklists digitais e inspeções',
+    'Aprovação de orçamentos',
+    'Indicadores de disponibilidade e custo'
+  ]
+};
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', path: '/' },
   { label: 'Quem Somos', path: '/sobre' },
-  { label: 'Serviços', path: '/servicos' },
+  { label: 'Soluções', path: '/servicos' },
   { label: 'Clientes', path: '/clientes' },
   { label: 'Blog', path: '/blog' },
   { label: 'Contato', path: '/contato' },
@@ -32,69 +73,78 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const SERVICES: Service[] = [
   {
-    id: 'dados',
-    title: 'Engenharia de Dados',
-    description: 'Estruturação, limpeza e organização de dados para transformar informações brutas em ativos estratégicos.',
-    icon: Database,
-    imageUrl: '/images/services/Engenharia_Dados_v2.png',
-    details: ['Data Warehousing', 'ETL/ELT Pipelines', 'Governança de Dados', 'Business Intelligence']
+    id: 'pagamento',
+    title: 'Automação de Pagamento de Motoristas',
+    description: 'Do cálculo ao comprovante fiscal. Reduzimos o pagamento da sua frota de dias para segundos.',
+    icon: CreditCard,
+    imageUrl: '/images/logistica/pagamento-motoristas.jpg',
+    details: ['Cálculo automático de fretes', 'Fluxo de aprovação inteligente', 'Pagamento no mesmo dia', 'Comprovante fiscal integrado']
   },
   {
-    id: 'automacao',
-    title: 'Automação de Processos',
-    description: 'Otimização de fluxos de trabalho operacionais para reduzir custos e eliminar erros manuais.',
-    icon: Workflow,
-    imageUrl: '/images/services/RPA.jpg',
-    details: ['RPA (Robotic Process Automation)', 'Integração de APIs', 'Workflows Customizados', 'Otimização Operacional']
+    id: 'integracao',
+    title: 'Integração de Sistemas Logísticos',
+    description: 'TMS, ERP, pedágio, combustível, rastreamento. Tudo conversando em uma única plataforma.',
+    icon: Share2,
+    imageUrl: '/images/logistica/integracao-sistemas.jpg',
+    details: ['Integração TMS/ERP/WMS', 'Conciliação automática de dados', 'APIs e conectores prontos', 'Data Warehouse logístico']
   },
   {
-    id: 'ia',
-    title: 'Inteligência Artificial',
-    description: 'Implementação de modelos preditivos e IA generativa aplicada ao contexto do seu negócio.',
-    icon: Cpu,
-    imageUrl: '/images/services/IA.avif',
-    details: ['Machine Learning', 'Processamento de Linguagem Natural', 'Análise Preditiva', 'Chatbots Inteligentes']
+    id: 'conciliação',
+    title: 'Conciliação Inteligente de Fretes',
+    description: 'Chega de planilhas infinitas. Sistema que confere tabela, acordado e realizado em minutos.',
+    icon: FileText,
+    imageUrl: '/images/logistica/conciliacao-fretes.jpg',
+    details: ['Conferência automática de fretes', 'Detecção de divergências', 'Histórico completo por veículo', 'Relatórios financeiros']
   },
   {
-    id: 'saas',
-    title: 'Desenvolvimento de Sistemas',
-    description: 'Criação de plataformas SaaS e websites robustos, escaláveis e focados na experiência do usuário.',
-    icon: Code2,
-    imageUrl: '/images/services/Saas.jpg',
-    details: ['SaaS B2B', 'Arquitetura de Microserviços', 'Web Apps Modernos', 'Sistemas Internos']
+    id: 'torre',
+    title: 'Torre de Controle e Dashboards',
+    description: 'KPIs logísticos em tempo real. Visibilidade de ponta a ponta da sua operação.',
+    icon: BarChart3,
+    imageUrl: '/images/logistica/torre-controle.jpg',
+    details: ['Painel operacional em tempo real', 'KPIs de frota e motoristas', 'Alertas inteligentes', 'Relatórios executivos']
   },
   {
-    id: 'sites',
-    title: 'Sites e Landing Pages',
-    description: 'Desenvolvimento de presenças digitais de alto impacto, rápidas e otimizadas para conversão.',
-    icon: Layout,
-    imageUrl: '/images/services/LandingPages.jpg',
-    details: ['Landing Pages de Alta Conversão', 'Sites Institucionais', 'SEO Otimizado', 'Performance Web']
+    id: 'portal',
+    title: 'Portal do Motorista',
+    description: 'O motorista consulta fretes, documentos, pagamentos e checklists pelo celular.',
+    icon: Smartphone,
+    imageUrl: '/images/logistica/portal-motorista.jpg',
+    details: ['App/web para motoristas', 'Consulta de fretes e pagamentos', 'Checklists digitais', 'Documentos e comprovantes']
   },
   {
-    id: 'outsourcing',
-    title: 'Terceirização de TI',
-    description: 'Suporte técnico estratégico e gestão de infraestrutura para que você foque apenas no seu negócio.',
-    icon: Users,
-    imageUrl: '/images/services/Outsourcing.jpg',
-    details: ['Gestão de Infraestrutura', 'Suporte Técnico N1/N2/N3', 'Consultoria em Segurança', 'Cloud Management']
+    id: 'frota',
+    title: 'Inteligência para Frota',
+    description: 'Manutenção preditiva, custo por km, análise de desempenho e redução de despesas operacionais.',
+    icon: Truck,
+    imageUrl: '/images/logistica/inteligencia-frota.jpg',
+    details: ['Manutenção preventiva e preditiva', 'Custo real por veículo', 'Análise de combustível', 'Otimização de roteirização']
   }
 ];
 
+export const LOGISTICS_AREAS = [
+  'Transporte Rodoviário',
+  'Gestão de Frota',
+  'Last Mile',
+  'Supply Chain',
+  'Frotistas e Agregados',
+  'Operadores Logísticos'
+];
+
 export const TESTIMONIALS: Testimonial[] = [
-  {
-    id: '2',
-    name: 'Pedro Quintella',
-    role: 'CEO',
-    company: 'Grupo Pralog',
-    content: 'A DataStack nos ajudou a transformar nossos processos operacionais, reduzindo custos e melhorando a eficiência do nosso negócio.'
-  },
   {
     id: '3',
     name: 'Viviane',
     role: 'Ger. Financeiro',
     company: 'Versan Logistic',
     content: 'Incrível! Tinhamos um processo de pagamento dos nossos motoristas que levava uma semana para finalizar. A DataStack reduziu esse tempo para um único click!'
+  },
+  {
+    id: '2',
+    name: 'Pedro Quintella',
+    role: 'CEO',
+    company: 'Grupo Pralog',
+    content: 'A DataStack nos ajudou a transformar nossos processos operacionais, reduzindo custos e melhorando a eficiência da nossa operação logística.'
   }
 ];
 

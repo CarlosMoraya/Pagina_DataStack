@@ -37,3 +37,22 @@ export interface NavItem {
   label: string;
   path: string;
 }
+
+export interface FounderInfo {
+  name: string;
+  role: string;
+  tagline: string;
+  experience: string;
+  education: string[];
+  companies: { name: string; role: string; period: string }[];
+  skills: string[];
+  linkedin: string;
+}
+
+export interface BetafleetInfo {
+  name: string;
+  tagline: string;
+  description: string;
+  url: string;
+  features: string[];
+}

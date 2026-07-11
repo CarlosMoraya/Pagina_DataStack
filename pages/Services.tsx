@@ -1,6 +1,6 @@
 import React from 'react';
-import { SERVICES } from '../constants';
-import { ArrowRight, Check } from 'lucide-react';
+import { SERVICES, LOGISTICS_AREAS, TESTIMONIALS } from '../constants';
+import { Check, Quote, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
@@ -9,14 +9,14 @@ const Services: React.FC = () => {
       {/* Header */}
       <section className="bg-brand-900 py-20">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Nossas Soluções</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Problemas que Resolvemos</h1>
           <p className="text-xl text-brand-300 max-w-2xl mx-auto">
-            Da infraestrutura de dados à interface do usuário. Cobrimos todo o ciclo de vida digital da sua empresa.
+            Não vendemos software. Resolvemos problemas reais de transporte e logística com a tecnologia certa para cada caso.
           </p>
         </div>
       </section>
 
-      {/* Services Detail List */}
+      {/* Solutions Detail List */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 space-y-32">
           {SERVICES.map((service, index) => (
@@ -27,7 +27,7 @@ const Services: React.FC = () => {
                 </div>
                 <h2 className="text-3xl font-bold text-brand-900 mb-6">{service.title}</h2>
                 <p className="text-lg text-brand-600 leading-relaxed mb-8">
-                  {service.description} Focamos em entregar código limpo, arquitetura segura e documentação completa, garantindo que a tecnologia seja um ativo e não um débito técnico.
+                  {service.description}
                 </p>
 
                 <h4 className="font-semibold text-brand-900 mb-4 uppercase text-sm tracking-wide">O que entregamos:</h4>
@@ -43,23 +43,7 @@ const Services: React.FC = () => {
               <div className="w-full md:w-1/2">
                 <div className="relative group overflow-hidden rounded-2xl shadow-2xl border border-brand-100 bg-brand-50 aspect-video md:aspect-square lg:aspect-[4/3]">
                   <div className="absolute inset-0 bg-gradient-to-tr from-brand-900/20 to-transparent z-10"></div>
-                  {service.imageUrl ? (
-                    <img
-                      src={service.imageUrl}
-                      alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = 'none';
-                        const parent = target.parentElement;
-                        if (parent) {
-                          const fallback = parent.querySelector('.fallback-icon') as HTMLElement;
-                          if (fallback) fallback.style.display = 'flex';
-                        }
-                      }}
-                    />
-                  ) : null}
-                  <div className={`fallback-icon absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-100 to-white ${service.imageUrl ? 'hidden' : 'flex'}`}>
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-100 to-white">
                     <service.icon size={120} className="text-brand-200" />
                     <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500 via-transparent to-transparent"></div>
                   </div>
@@ -70,18 +54,48 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      {/* Areas of Actuation */}
+      {/* Case Highlight */}
       <section className="py-20 bg-brand-50">
         <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <span className="text-sm font-bold text-accent tracking-widest uppercase mb-3 block">Case de sucesso</span>
+            <h2 className="text-3xl font-bold text-brand-900 mb-4">Resultado que fala por si</h2>
+          </div>
+          <div className="max-w-3xl mx-auto">
+            {TESTIMONIALS.filter(t => t.company === 'Versan Logistic').map((testimonial) => (
+              <div key={testimonial.id} className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-brand-100 relative">
+                <Quote className="absolute top-6 right-6 text-brand-100 h-16 w-16 fill-current" />
+                <p className="text-xl text-brand-600 italic mb-8 relative z-10 leading-relaxed">
+                  "{testimonial.content}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="h-12 w-12 bg-brand-200 rounded-full flex items-center justify-center text-brand-600 font-bold text-lg">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-brand-900">{testimonial.name}</h5>
+                    <p className="text-sm text-brand-500">{testimonial.role}, {testimonial.company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Areas of Expertise */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-brand-900 mb-4">Áreas de Atuação</h2>
-            <p className="text-brand-600">Expertise aplicada a diversos setores.</p>
+            <span className="text-sm font-bold text-accent tracking-widest uppercase mb-3 block">Especialistas em</span>
+            <h2 className="text-3xl font-bold text-brand-900 mb-4">Segmentos Logísticos</h2>
+            <p className="text-brand-600">Expertise aplicada a diferentes operações de transporte.</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {['Varejo & E-commerce', 'Finanças & Fintech', 'Logística & Supply Chain', 'Saúde & Healthtech', 'Agronegócio', 'Indústria 4.0', 'Educação', 'Serviços Jurídicos'].map((area) => (
-              <div key={area} className="bg-white p-6 rounded-lg text-center shadow-sm hover:shadow-md transition-shadow border border-transparent hover:border-brand-200">
-                <span className="font-medium text-brand-800">{area}</span>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {LOGISTICS_AREAS.map((area) => (
+              <div key={area} className="bg-brand-50 p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-all border border-transparent hover:border-accent/30 hover:bg-white group">
+                <span className="font-semibold text-brand-800 group-hover:text-accent transition-colors">{area}</span>
               </div>
             ))}
           </div>
@@ -89,12 +103,12 @@ const Services: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-white border-t border-brand-100">
+      <section className="py-16 bg-brand-50 border-t border-brand-100">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl font-bold text-brand-900 mb-6">Não encontrou o que procura?</h2>
-          <p className="text-brand-600 mb-8">Desenvolvemos soluções sob medida para desafios complexos.</p>
-          <Link to="/contato" className="inline-flex items-center text-accent font-bold hover:underline">
-            Fale com nossos consultores <ArrowRight className="ml-2 h-5 w-5" />
+          <h2 className="text-2xl font-bold text-brand-900 mb-4">Não encontrou o que procura?</h2>
+          <p className="text-brand-600 mb-8">Cada operação de transporte é única. Desenhamos a solução certa para o seu problema.</p>
+          <Link to="/contato" className="inline-flex items-center text-accent font-bold hover:underline group">
+            Fale com nosso consultor <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </section>

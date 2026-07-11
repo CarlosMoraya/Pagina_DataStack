@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
         <div className="container mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Fale Conosco</h1>
           <p className="text-xl text-brand-300 max-w-2xl mx-auto">
-            Vamos discutir como a Data Stack pode acelerar seu negócio.
+            Vamos discutir como a Data Stack pode resolver os problemas de logística da sua transportadora.
           </p>
         </div>
       </section>
@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
             <div>
               <h2 className="text-3xl font-bold text-brand-900 mb-8">Entre em contato</h2>
               <p className="text-brand-600 mb-10 text-lg">
-                Preencha o formulário ou utilize nossos canais diretos. Estamos prontos para entender seu desafio técnico.
+                Preencha o formulário ou utilize nossos canais diretos. Estamos prontos para entender os desafios da sua operação de transporte.
               </p>
 
               <div className="space-y-8">
@@ -170,9 +170,8 @@ const Contact: React.FC = () => {
                   <div className="bg-green-100 text-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
                     <CheckCircle size={48} />
                   </div>
-                  <h3 className="text-2xl font-bold text-brand-900 mb-4">Mensagem Enviada!</h3>
-                  <p className="text-brand-600 mb-8 max-w-sm mx-auto">
-                    Obrigado pelo contato. Nossa equipe técnica analisará seu desafio e retornará em breve.
+                  <h3 className="text-2xl font-bold text-brand-900 mb-4">Mensagem Enviada!</h3>                    <p className="text-brand-600 mb-8 max-w-sm mx-auto">
+                    Obrigado pelo contato. Analisaremos sua operação e retornaremos em breve com as melhores soluções.
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
@@ -238,7 +237,7 @@ const Contact: React.FC = () => {
                       onChange={handleChange}
                       disabled={isLoading}
                       className="w-full px-4 py-3 rounded-lg border border-brand-300 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all resize-none disabled:opacity-50"
-                      placeholder="Descreva brevemente seu desafio..."
+                      placeholder="Descreva brevemente o desafio da sua transportadora..."
                     ></textarea>
                   </div>
 
