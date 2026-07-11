@@ -27,18 +27,13 @@ export const CARLOS_INFO: FounderInfo = {
   name: 'Carlos Moraya',
   role: 'Fundador & Consultor',
   tagline: '15+ anos resolvendo problemas de logística com tecnologia',
-  experience: 'Mais de 15 anos de experiência em logística e transporte, com passagens por Coca-Cola Andina, Mercado Livre, Grupo Pralog e Deluna Transportes. Especialista em tecnologia aplicada a negócios, com MBA em Logística e pós-graduação em Tecnologia Aplicada (AI, Data Science e Big Data) pela PUCRS.',
+  experience: 'Mais de 15 anos de experiência em logística e transporte, com passagens por Coca-Cola Andina e Mercado Livre, além de transportadoras e operadores logísticos de grande porte. Especialista em tecnologia aplicada a negócios, com MBA em Logística e pós-graduação em Tecnologia Aplicada (AI, Data Science e Big Data) pela PUCRS.',
   education: [
     'MBA em Logística',
     'Consultoria Empresarial',
     'Tecnologia Aplicada aos Negócios — PUCRS',
   ],
-  companies: [
-    { name: 'Deluna Transportes', role: 'Gerente de Operações Last/First Mile', period: '2024 — Atual' },
-    { name: 'Grupo Pralog', role: 'Gerente de Logística', period: '2022 — 2024' },
-    { name: 'Mercado Livre', role: 'Team Leader (Frota e Roteirização)', period: '2020 — 2022' },
-    { name: 'Coca-Cola Andina', role: 'Supervisor de Distribuição', period: '2015 — 2018' },
-  ],
+  companies: [],
   skills: [
     'Python', 'SQL', 'BigQuery', 'Looker Studio',
     'Power BI', 'WMS', 'Gestão de Frota',

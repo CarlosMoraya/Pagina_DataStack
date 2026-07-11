@@ -31,7 +31,7 @@ const About: React.FC = () => {
                     A <strong>Data Stack</strong> nasceu dentro da operação. Não de um curso de programação ou de uma ideia de board.
                   </p>
                   <p>
-                    <strong>Carlos Moraya</strong> passou mais de 15 anos gerenciando frotas, operações Last Mile, armazéns e equipes em empresas como Coca-Cola Andina, Mercado Livre, Grupo Pralog e Deluna Transportes.
+                    <strong>Carlos Moraya</strong> passou mais de 15 anos gerenciando frotas, operações Last Mile, armazéns e equipes em empresas como Coca-Cola Andina e Mercado Livre, além de atuar em transportadoras e operadores logísticos de grande porte.
                   </p>
                   <p>
                     Ele viu de perto onde a tecnologia ajuda — e onde ela atrapalha. Porque não adianta ter o sistema mais moderno do mundo se ele não conversa com o seu TMS. Não adianta prometer IA se o problema do seu motorista é mais simples: receber o pagamento no dia certo.
@@ -73,54 +73,6 @@ const About: React.FC = () => {
                     LinkedIn
                     <ExternalLink size={14} />
                   </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-20 bg-brand-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-brand-900 mb-4">Trajetória</h2>
-            <p className="text-brand-600">15+ anos imerso na operação de logística e transporte.</p>
-          </div>
-
-          <div className="max-w-3xl mx-auto relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-brand-200 hidden md:block"></div>
-
-            <div className="space-y-8">
-              {CARLOS_INFO.companies.map((company, idx) => (
-                <div key={idx} className="relative pl-0 md:pl-20">
-                  <div className="hidden md:flex absolute left-4 top-1 h-9 w-9 bg-accent rounded-xl items-center justify-center text-white font-bold text-sm shadow-md z-10">
-                    {idx + 1}
-                  </div>
-                  <div className="bg-white border border-brand-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-xs font-bold text-accent uppercase tracking-wider bg-accent/10 px-2 py-1 rounded">
-                        {company.period}
-                      </span>
-                    </div>
-                    <h4 className="text-lg font-bold text-brand-900">{company.name}</h4>
-                    <p className="text-brand-500">{company.role}</p>
-                  </div>
-                </div>
-              ))}
-              <div className="relative pl-0 md:pl-20">
-                <div className="hidden md:flex absolute left-4 top-1 h-9 w-9 bg-brand-900 rounded-xl items-center justify-center text-white font-bold text-sm shadow-md z-10">
-                  5
-                </div>
-                <div className="bg-accent/5 border border-accent/20 rounded-xl p-6 shadow-sm">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-xs font-bold text-accent uppercase tracking-wider bg-accent/10 px-2 py-1 rounded">
-                      2024 — Atual
-                    </span>
-                  </div>
-                  <h4 className="text-lg font-bold text-brand-900">Data Stack</h4>
-                  <p className="text-brand-500">Fundador — Consultoria em Tecnologia para Logística</p>
                 </div>
               </div>
             </div>
@@ -208,7 +160,7 @@ const About: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-10 items-start">
                 <div>
                   <p className="text-brand-300 leading-relaxed mb-6">
-                    O BetaFleet não surgiu de uma ideia de board. Surgiu porque Carlos Moraya, durante anos gerenciando frotas no Mercado Livre, Pralog e Deluna, viu que faltava uma ferramenta simples e objetiva para operações de e-commerce. Ele construiu.
+                    O BetaFleet não surgiu de uma ideia de board. Surgiu porque Carlos Moraya, durante anos gerenciando frotas em grandes operações de e-commerce e logística, viu que faltava uma ferramenta simples e objetiva. Ele construiu.
                   </p>
                   <p className="text-brand-400 text-sm mb-8">
                     Essa capacidade de construir tecnologia é o que a Data Stack coloca a serviço da sua transportadora — seja criando uma solução sob medida, seja integrando as melhores ferramentas do mercado.
