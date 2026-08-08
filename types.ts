@@ -48,11 +48,3 @@ export interface FounderInfo {
   skills: string[];
   linkedin: string;
 }
-
-export interface BetafleetInfo {
-  name: string;
-  tagline: string;
-  description: string;
-  url: string;
-  features: string[];
-}

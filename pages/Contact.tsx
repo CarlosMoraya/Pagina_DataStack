@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
         <div className="container mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Fale Conosco</h1>
           <p className="text-xl text-brand-300 max-w-2xl mx-auto">
-            Vamos discutir como a Data Stack pode resolver os problemas de logística da sua transportadora.
+            Vamos discutir como a inteligência logística pode transformar a tomada de decisão na sua operação.
           </p>
         </div>
       </section>

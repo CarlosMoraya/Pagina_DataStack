@@ -1,5 +1,5 @@
 import { CreditCard, Share2, FileText, BarChart3, Smartphone, Truck, Target } from 'lucide-react';
-import { BlogPost, NavItem, Service, Testimonial, Client, FounderInfo, BetafleetInfo } from './types';
+import { BlogPost, NavItem, Service, Testimonial, Client, FounderInfo } from './types';
 
 export const CLIENTS: Client[] = [
   { name: 'Versan Logistic', logo: '/images/services/Versan.png?v=1' },
@@ -25,9 +25,9 @@ export const CARLOS_LINKEDIN = 'https://www.linkedin.com/in/carlosmoraya/';
 
 export const CARLOS_INFO: FounderInfo = {
   name: 'Carlos Moraya',
-  role: 'Fundador & Consultor',
-  tagline: '15+ anos resolvendo problemas de logística com tecnologia',
-  experience: 'Mais de 15 anos de experiência em logística e transporte, com passagens por Coca-Cola Andina e Mercado Livre, além de transportadoras e operadores logísticos de grande porte. Especialista em tecnologia aplicada a negócios, com MBA em Logística e pós-graduação em Tecnologia Aplicada (AI, Data Science e Big Data) pela PUCRS.',
+  role: 'Fundador & Consultor em Inteligência Logística',
+  tagline: 'Transformando dados operacionais em decisões logísticas há mais de 15 anos',
+  experience: 'Mais de 15 anos de vivência na operação: gerenciou frotas, armazéns, Last Mile e cadeias de suprimentos em empresas como Coca-Cola Andina e Mercado Livre, além de transportadoras e operadores logísticos de grande porte. Viu na prática onde a falta de dados confiáveis, sistemas isolados e decisões reativas geram custo desnecessário e ruptura de serviço. Combinou essa bagagem operacional com MBA em Logística e pós-graduação em Tecnologia Aplicada aos Negócios (AI, Data Science e Big Data) pela PUCRS. Hoje aplica inteligência logística — dados, modelos e tecnologia — para transformar cadeias de suprimentos.',
   education: [
     'MBA em Logística',
     'Consultoria Empresarial',
@@ -36,25 +36,11 @@ export const CARLOS_INFO: FounderInfo = {
   companies: [],
   skills: [
     'Python', 'SQL', 'BigQuery', 'Looker Studio',
-    'Power BI', 'WMS', 'Gestão de Frota',
+    'Power BI', 'WMS', 'TMS', 'Previsão de Demanda',
+    'Roteirização', 'Otimização de Estoques',
     'Lean Manufacturing', 'Six Sigma', 'Melhoria Contínua'
   ],
   linkedin: CARLOS_LINKEDIN,
-};
-
-export const BETAFLEET: BetafleetInfo = {
-  name: 'BetaFleet',
-  tagline: 'Gestão Inteligente de Frota para E-commerce',
-  description: 'Plataforma criada por Carlos Moraya que centraliza dados operacionais, reduz custos e aumenta o ROI de cada veículo da operação. Uma prova do conhecimento na prática.',
-  url: 'https://betafleet.com.br',
-  features: [
-    'Dashboard operacional em tempo real',
-    'Controle de manutenção preventiva',
-    'Gestão financeira por veículo',
-    'Checklists digitais e inspeções',
-    'Aprovação de orçamentos',
-    'Indicadores de disponibilidade e custo'
-  ]
 };
 
 export const NAV_ITEMS: NavItem[] = [
@@ -68,6 +54,22 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const SERVICES: Service[] = [
   {
+    id: 'previsao',
+    title: 'Previsão de Demanda',
+    description: 'Modelos que consideram sazonalidade, promoções, região e histórico para orientar compras, estoque e distribuição.',
+    icon: BarChart3,
+    imageUrl: '/images/logistica/torre-controle.jpg',
+    details: ['Modelos estatísticos e machine learning', 'Redução de ruptura e excesso de estoque', 'Planejamento de compras otimizado', 'Menor necessidade de fretes emergenciais']
+  },
+  {
+    id: 'roteirizacao',
+    title: 'Roteirização Inteligente',
+    description: 'Otimização de rotas considerando distância, trânsito, janelas de entrega, capacidade dos veículos e jornada dos motoristas.',
+    icon: Truck,
+    imageUrl: '/images/logistica/inteligencia-frota.jpg',
+    details: ['Otimização multiobjetivo em tempo real', 'Consolidação de cargas', 'Reprogramação diante de imprevistos', 'Redução de km rodados e emissões']
+  },
+  {
     id: 'pagamento',
     title: 'Automação de Pagamento de Motoristas',
     description: 'Do cálculo ao comprovante fiscal. Reduzimos o pagamento da sua frota de dias para segundos.',
@@ -78,42 +80,26 @@ export const SERVICES: Service[] = [
   {
     id: 'integracao',
     title: 'Integração de Sistemas Logísticos',
-    description: 'TMS, ERP, pedágio, combustível, rastreamento. Tudo conversando em uma única plataforma.',
+    description: 'Da coleta à decisão: conectamos ERP, TMS, WMS, rastreamento e sensores em uma única fonte de verdade.',
     icon: Share2,
     imageUrl: '/images/logistica/integracao-sistemas.jpg',
-    details: ['Integração TMS/ERP/WMS', 'Conciliação automática de dados', 'APIs e conectores prontos', 'Data Warehouse logístico']
+    details: ['Integração ERP/TMS/WMS', 'Qualidade e padronização de dados', 'APIs e conectores prontos', 'Data Warehouse logístico']
   },
   {
-    id: 'conciliação',
+    id: 'visibilidade',
+    title: 'Visibilidade Ponta a Ponta',
+    description: 'Acompanhe pedidos e cargas do fornecedor ao cliente final. GPS, IoT, telemetria e alertas de atraso em tempo real.',
+    icon: Target,
+    imageUrl: '/images/logistica/portal-motorista.jpg',
+    details: ['Rastreamento GPS e telemetria', 'Monitoramento de temperatura e condições', 'Alertas automáticos de desvio e atraso', 'Estimativa de horário de chegada (ETA)']
+  },
+  {
+    id: 'conciliacao',
     title: 'Conciliação Inteligente de Fretes',
-    description: 'Chega de planilhas infinitas. Sistema que confere tabela, acordado e realizado em minutos.',
+    description: 'Conferência automática entre tabela, acordado e realizado. Detecção de divergências em minutos, não em dias.',
     icon: FileText,
     imageUrl: '/images/logistica/conciliacao-fretes.jpg',
-    details: ['Conferência automática de fretes', 'Detecção de divergências', 'Histórico completo por veículo', 'Relatórios financeiros']
-  },
-  {
-    id: 'torre',
-    title: 'Torre de Controle e Dashboards',
-    description: 'KPIs logísticos em tempo real. Visibilidade de ponta a ponta da sua operação.',
-    icon: BarChart3,
-    imageUrl: '/images/logistica/torre-controle.jpg',
-    details: ['Painel operacional em tempo real', 'KPIs de frota e motoristas', 'Alertas inteligentes', 'Relatórios executivos']
-  },
-  {
-    id: 'portal',
-    title: 'Portal do Motorista',
-    description: 'O motorista consulta fretes, documentos, pagamentos e checklists pelo celular.',
-    icon: Smartphone,
-    imageUrl: '/images/logistica/portal-motorista.jpg',
-    details: ['App/web para motoristas', 'Consulta de fretes e pagamentos', 'Checklists digitais', 'Documentos e comprovantes']
-  },
-  {
-    id: 'frota',
-    title: 'Inteligência para Frota',
-    description: 'Manutenção preditiva, custo por km, análise de desempenho e redução de despesas operacionais.',
-    icon: Truck,
-    imageUrl: '/images/logistica/inteligencia-frota.jpg',
-    details: ['Manutenção preventiva e preditiva', 'Custo real por veículo', 'Análise de combustível', 'Otimização de roteirização']
+    details: ['Conferência automática de fretes', 'Detecção de divergências', 'Histórico completo por veículo', 'Relatórios financeiros e auditoria']
   }
 ];
 
@@ -121,8 +107,8 @@ export const LOGISTICS_AREAS = [
   'Transporte Rodoviário',
   'Gestão de Frota',
   'Last Mile',
+  'Centros de Distribuição',
   'Supply Chain',
-  'Frotistas e Agregados',
   'Operadores Logísticos'
 ];
 
@@ -132,14 +118,14 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Viviane',
     role: 'Ger. Financeiro',
     company: 'Versan Logistic',
-    content: 'Incrível! Tinhamos um processo de pagamento dos nossos motoristas que levava uma semana para finalizar. A DataStack reduziu esse tempo para um único click!'
+    content: 'Incrível! Tínhamos um processo de pagamento dos nossos motoristas que levava uma semana para finalizar. A DataStack reduziu esse tempo para um único clique!'
   },
   {
     id: '2',
     name: 'Pedro Quintella',
     role: 'CEO',
     company: 'Grupo Pralog',
-    content: 'A DataStack nos ajudou a transformar nossos processos operacionais, reduzindo custos e melhorando a eficiência da nossa operação logística.'
+    content: 'A DataStack nos ajudou a transformar dados operacionais em decisões. Reduzimos custos e melhoramos a eficiência de toda a nossa cadeia logística.'
   }
 ];
 

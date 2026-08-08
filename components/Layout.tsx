@@ -105,8 +105,7 @@ const Layout: React.FC = () => {
             <div className="col-span-1 md:col-span-2">
               <Logo variant="light" className="h-10 mb-6" />
               <p className="text-brand-400 max-w-sm mb-6 leading-relaxed">
-                Resolvemos problemas reais de logística com tecnologia.
-                Consultoria especializada em transporte — com soluções próprias e de mercado.
+                Inteligência logística para o seu negócio. Transformamos dados da cadeia de suprimentos em decisões melhores, mais rápidas e mensuráveis.
               </p>
               <div className="flex gap-4 text-brand-400">
                 <a href="https://www.linkedin.com/in/carlosmoraya/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
@@ -128,10 +127,10 @@ const Layout: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold mb-6 text-brand-50">Soluções</h4>
               <ul className="space-y-4 text-brand-400">
-                <li><NavLink to="/servicos" className="hover:text-white transition-colors">Pagamento de Motoristas</NavLink></li>
+                <li><NavLink to="/servicos" className="hover:text-white transition-colors">Previsão de Demanda</NavLink></li>
+                <li><NavLink to="/servicos" className="hover:text-white transition-colors">Roteirização Inteligente</NavLink></li>
+                <li><NavLink to="/servicos" className="hover:text-white transition-colors">Visibilidade Ponta a Ponta</NavLink></li>
                 <li><NavLink to="/servicos" className="hover:text-white transition-colors">Integração de Sistemas</NavLink></li>
-                <li><NavLink to="/servicos" className="hover:text-white transition-colors">Inteligência para Frota</NavLink></li>
-                <li><NavLink to="/servicos" className="hover:text-white transition-colors">Portal do Motorista</NavLink></li>
               </ul>
             </div>
           </div>
