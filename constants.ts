@@ -58,7 +58,7 @@ export const SERVICES: Service[] = [
     title: 'Previsão de Demanda',
     description: 'Modelos que consideram sazonalidade, promoções, região e histórico para orientar compras, estoque e distribuição.',
     icon: BarChart3,
-    imageUrl: '/images/logistica/torre-controle.jpg',
+    imageUrl: '/images/01-demand-forecasting.jpg',
     details: ['Modelos estatísticos e machine learning', 'Redução de ruptura e excesso de estoque', 'Planejamento de compras otimizado', 'Menor necessidade de fretes emergenciais']
   },
   {
@@ -66,7 +66,7 @@ export const SERVICES: Service[] = [
     title: 'Roteirização Inteligente',
     description: 'Otimização de rotas considerando distância, trânsito, janelas de entrega, capacidade dos veículos e jornada dos motoristas.',
     icon: Truck,
-    imageUrl: '/images/logistica/inteligencia-frota.jpg',
+    imageUrl: '/images/02-intelligent-routing.jpg',
     details: ['Otimização multiobjetivo em tempo real', 'Consolidação de cargas', 'Reprogramação diante de imprevistos', 'Redução de km rodados e emissões']
   },
   {
@@ -74,7 +74,7 @@ export const SERVICES: Service[] = [
     title: 'Automação de Pagamento de Motoristas',
     description: 'Do cálculo ao comprovante fiscal. Reduzimos o pagamento da sua frota de dias para segundos.',
     icon: CreditCard,
-    imageUrl: '/images/logistica/pagamento-motoristas.jpg',
+    imageUrl: '/images/03-driver-payment-automation.jpg',
     details: ['Cálculo automático de fretes', 'Fluxo de aprovação inteligente', 'Pagamento no mesmo dia', 'Comprovante fiscal integrado']
   },
   {
@@ -82,7 +82,7 @@ export const SERVICES: Service[] = [
     title: 'Integração de Sistemas Logísticos',
     description: 'Da coleta à decisão: conectamos ERP, TMS, WMS, rastreamento e sensores em uma única fonte de verdade.',
     icon: Share2,
-    imageUrl: '/images/logistica/integracao-sistemas.jpg',
+    imageUrl: '/images/04-logistics-systems-integration.jpg',
     details: ['Integração ERP/TMS/WMS', 'Qualidade e padronização de dados', 'APIs e conectores prontos', 'Data Warehouse logístico']
   },
   {
@@ -90,7 +90,7 @@ export const SERVICES: Service[] = [
     title: 'Visibilidade Ponta a Ponta',
     description: 'Acompanhe pedidos e cargas do fornecedor ao cliente final. GPS, IoT, telemetria e alertas de atraso em tempo real.',
     icon: Target,
-    imageUrl: '/images/logistica/portal-motorista.jpg',
+    imageUrl: '/images/05-end-to-end-visibility.jpg',
     details: ['Rastreamento GPS e telemetria', 'Monitoramento de temperatura e condições', 'Alertas automáticos de desvio e atraso', 'Estimativa de horário de chegada (ETA)']
   },
   {
@@ -98,7 +98,7 @@ export const SERVICES: Service[] = [
     title: 'Conciliação Inteligente de Fretes',
     description: 'Conferência automática entre tabela, acordado e realizado. Detecção de divergências em minutos, não em dias.',
     icon: FileText,
-    imageUrl: '/images/logistica/conciliacao-fretes.jpg',
+    imageUrl: '/images/06-freight-reconciliation.jpg',
     details: ['Conferência automática de fretes', 'Detecção de divergências', 'Histórico completo por veículo', 'Relatórios financeiros e auditoria']
   }
 ];
